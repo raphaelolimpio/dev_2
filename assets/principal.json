@@ -1,0 +1,2145 @@
+{
+  "Git — Comandos e Termos": [
+    {
+      "nome": "git init",
+      "categoria": "Inicialização de repositório",
+      "definicao": "Cria um repositório Git vazio na pasta atual.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Você usa esse comando no diretório do seu projeto para começar a versionar os arquivos com o Git. Ele cria uma pasta oculta chamada .git  que armazena todo o histórico de versões.",
+      "dicas_de_uso": "Use somente uma vez por projeto. Para repositórios remotos (GitHub, GitLab), use junto com git remote add origin ."
+    },
+    {
+      "nome": "git add",
+      "categoria": "Staging (preparação de arquivos)",
+      "definicao": "Adiciona arquivos ao “stage”, preparando -os para serem commitados.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Com git add . , você adiciona todas as alterações feitas nos arquivos para o próximo commit. Pode também usar git add nome_do_arquivo .",
+      "dicas_de_uso": "Sempre cheque o que será adicionado com git status  antes de executar o add ."
+    },
+    {
+      "nome": "git commit",
+      "categoria": "Salvamento de alterações",
+      "definicao": "Registra as mudanças adicionadas com uma mensagem descritiva.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " O commit  salva um ponto no histórico do projeto. Ele deve conter uma mensagem clara sobre o que foi feito.",
+      "dicas_de_uso": "Siga boas práticas nas mensagens de commit. Ex: \"Corrige bug na validação do formulário\"."
+    },
+    {
+      "nome": "git push",
+      "categoria": "Sincronização com repositório remoto",
+      "definicao": "Envia os commits locais para um repositório remoto (como GitHub).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando sincroniza suas alterações locais com a branch principal no servidor remoto.",
+      "dicas_de_uso": "Confirme sempre em qual branch está ( git branch ) antes de dar push."
+    },
+    {
+      "nome": "git pull",
+      "categoria": "Atualização local",
+      "definicao": "Baixa e integra as alterações do repositório remoto.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Combina as alterações remotas com as locais. Essencial para manter o trabalho atualizado com o time.",
+      "dicas_de_uso": "Dê pull antes de começar o trabalho do dia para evitar conflitos."
+    },
+    {
+      "nome": "git merge",
+      "categoria": "Integração de branches",
+      "definicao": "Une duas branches diferentes em uma única linha de histórico.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Usado geralmente para unir uma feature de volta à branch main .",
+      "dicas_de_uso": "Resolva conflitos com calma. Use git status  para ver arquivos afetados."
+    },
+    {
+      "nome": "git checkout",
+      "categoria": "Navegação entre versões",
+      "definicao": "Troca de branch ou restaura arquivos para um estado anterior.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Com -b, você cria e já troca para uma nova branch. Sem -b, apenas muda de branch.",
+      "dicas_de_uso": "Ideal para separar funcionalidades por branch."
+    },
+    {
+      "nome": "git stash",
+      "categoria": "Armazenamento temporário",
+      "definicao": "Guarda temporariamente mudanças sem commitá -las.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Útil quando você quer mudar de branch, mas não quer perder o que já começou.",
+      "dicas_de_uso": "Use git stash pop  para restaurar depois."
+    },
+    {
+      "nome": "git clone",
+      "categoria": "Clonagem de repositório",
+      "definicao": "Cria uma cópia local de um repositório remoto.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Usado para começar a trabalhar em um projeto hospedado em plataformas como GitHub ou GitLab.",
+      "dicas_de_uso": "Ideal para colaboradores que vão contribuir em projetos existentes."
+    },
+    {
+      "nome": "git log",
+      "categoria": "Histórico de commits",
+      "definicao": "Exibe o histórico de commits realizados em um repositório.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Ajuda a visualizar o fluxo de trabalho e identificar quando e por quem foram feitas alterações.",
+      "dicas_de_uso": "Combine com --author=\"nome\"  para filtrar por contribuidor."
+    },
+    {
+      "nome": "git reset",
+      "categoria": "Desfazer mudanças",
+      "definicao": "Reverte arquivos para estados anteriores ou remove commits.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Remove o último commit e qualquer alteração relacionada a ele.",
+      "dicas_de_uso": "Use com cuidado — pode apagar trabalho que não foi salvo em outro lugar."
+    },
+    {
+      "nome": ".gitignore",
+      "categoria": "Configuração de projeto",
+      "definicao": "Arquivo que define quais arquivos ou pastas devem ser ignorados pelo",
+      "explicacao_pratica": " Evita o versionamento de arquivos temporários, sensíveis ou desnecessários.",
+      "dicas_de_uso": "Personalize para o seu projeto e linguagem. Exemplos prontos estão disponíveis em https://github.com/github/gitignore ."
+    },
+    {
+      "nome": "git rebase",
+      "categoria": "Reescrita de histórico",
+      "definicao": "Move ou reaplica commits em cima de outra base.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Reorganiza o histórico para que os commits fiquem em linha reta, facilitando a leitura.",
+      "dicas_de_uso": "Não use em branches compartilhadas — pode causar conflitos de histórico."
+    }
+  ],
+  "Linux / Terminal Básico": [
+    {
+      "nome": "git tag",
+      "categoria": "Marcação de versões",
+      "definicao": "Cria pontos fixos no histórico, geralmente usados para marcar versões.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Ajuda a identificar releases ou marcos importantes no projeto.",
+      "dicas_de_uso": "Combine com git push origin v1.0.0  para publicar a tag."
+    },
+    {
+      "nome": "ls",
+      "categoria": "Listagem de arquivos",
+      "definicao": "Lista os arquivos e diretórios do diretório atual.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra todos os arquivos, inclusive ocultos (aqueles que começam com .), com permissões, dono, data de modificação e tamanho.",
+      "dicas_de_uso": "Combine com pipes como ls -la | grep nome  para filtrar resultados."
+    },
+    {
+      "nome": "cd",
+      "categoria": "Navegação de diretórios",
+      "definicao": "Muda o diretório de trabalho atual no terminal.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Você usa cd para entrar em uma pasta. Também pode usar cd ..  para voltar uma pasta ou cd ~  para ir ao diretório home.",
+      "dicas_de_uso": "Use tab para autocomplete de caminhos!"
+    },
+    {
+      "nome": "pwd",
+      "categoria": "Localização",
+      "definicao": "Mostra o caminho completo (absoluto) da pasta atual.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Útil para saber exatamente onde você está navegando no sistema de arquivos.",
+      "dicas_de_uso": "Combine com scripts para registrar o diretório de execução."
+    },
+    {
+      "nome": "mkdir",
+      "categoria": "Criação de diretórios",
+      "definicao": "Cria um novo diretório.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria uma pasta chamada projeto-novo  no diretório atual. Use -p para criar estruturas aninhadas.",
+      "dicas_de_uso": "mkdir -p pasta1/pasta2/pasta3  cria todas de uma vez."
+    },
+    {
+      "nome": "rm",
+      "categoria": "Remoção de arquivos/diretórios",
+      "definicao": "Remove arquivos ou diretórios.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Apaga a pasta build  e todo o conteúdo dentro dela sem pedir confirmação.",
+      "dicas_de_uso": "CUIDADO com rm -rf, ele não perdoa! Sempre revise antes."
+    },
+    {
+      "nome": "touch",
+      "categoria": "Criação de arquivos",
+      "definicao": "Cria arquivos vazios ou atualiza a data de modificação.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria um novo arquivo chamado index.html  no diretório atual.",
+      "dicas_de_uso": "Combine com mkdir  para estruturar rapidamente um projeto."
+    },
+    {
+      "nome": "chmod",
+      "categoria": "Permissões",
+      "definicao": "Modifica permissões de leitura, escrita e execução de arquivos ou",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Torna um arquivo .sh  executável, útil para rodar scripts no terminal.",
+      "dicas_de_uso": "Use com responsabilidade em servidores e scripts de produção."
+    },
+    {
+      "nome": "cat",
+      "categoria": "Leitura de arquivos",
+      "definicao": "Exibe o conteúdo de arquivos no terminal.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra o conteúdo do arquivo direto no terminal, sem abrir um editor.",
+      "dicas_de_uso": "Combine com | grep  para buscar por palavras -chave."
+    },
+    {
+      "nome": "nano",
+      "categoria": "Editor de texto terminal",
+      "definicao": "Abre arquivos em modo de edição no terminal, com interface simples.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Abre o arquivo config.json  para edição rápida. É leve, fácil de usar e disponível na maioria dos sistemas Linux.",
+      "dicas_de_uso": "Para salvar no nano , pressione CTRL + O , depois ENTER . Para sair, CTRL + X ."
+    },
+    {
+      "nome": "cp",
+      "categoria": "Cópia de arquivos",
+      "definicao": "Copia arquivos e diretórios de um local para outro.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando copia arquivos do diretório atual para o destino especificado. Para copiar diretórios, utilize a opção -r (recursivo).",
+      "dicas_de_uso": "Combine com -i para evitar sobrescrever arquivos sem confirmação."
+    },
+    {
+      "nome": "mv",
+      "categoria": "Movimentação ou renomeação de arquivos",
+      "definicao": "Move ou renomeia arquivos e diretórios.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " O comando move arquivos de um diretório para outro ou renomeia arquivos dentro do mesmo diretório.",
+      "dicas_de_uso": "Use -i para uma confirmação antes de sobrescrever um arquivo existente."
+    },
+    {
+      "nome": "grep",
+      "categoria": "Busca de texto",
+      "definicao": "Procura por padrões específicos de texto dentro de arquivos.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Exibe as linhas do arquivo que contêm a palavra ou expressão fornecida.",
+      "dicas_de_uso": "Combine com -r para procurar recursivamente em diretórios."
+    },
+    {
+      "nome": "find",
+      "categoria": "Busca de arquivos",
+      "definicao": "Procura arquivos e diretórios no sistema, com base em critérios",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Permite buscar arquivos por nome, tipo, permissão, data de modificação, entre outros critérios.",
+      "dicas_de_uso": "Use -exec  para executar um comando em arquivos encontrados (ex: find . -name \"*.log\" -exec rm {} \\;)."
+    },
+    {
+      "nome": "top",
+      "categoria": "Monitoramento de processos",
+      "definicao": "Exibe uma visão em tempo real dos processos em execução no",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra os processos mais ativos e os recursos que estão consumindo, como CPU e memória.",
+      "dicas_de_uso": "Pressione q para sair da interface."
+    },
+    {
+      "nome": "ps",
+      "categoria": "Listagem de processos",
+      "definicao": "Exibe os processos em execução no sistema.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra todos os processos com detalhes sobre o uso de recursos.",
+      "dicas_de_uso": "Combine com grep  para buscar por um processo específico (ex: ps aux | grep nginx )."
+    },
+    {
+      "nome": "df",
+      "categoria": "Informações sobre o sistema de arquivos",
+      "definicao": "Exibe o uso do disco e as partições montadas no sistema.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra o espaço total, usado e disponível em discos e partições montadas. O -h exibe os valores em formato legível (como GB ou MB).",
+      "dicas_de_uso": "Combine com grep  para buscar por partições específicas."
+    },
+    {
+      "nome": "whoami",
+      "categoria": "Identificação do usuário",
+      "definicao": "Exibe o nome do usuário atualmente logado no sistema.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Útil para verificar qual usuário está executando o terminal, especialmente em sistemas com múltiplos usuários.",
+      "dicas_de_uso": "Combine com sudo  para verificar o usuário de um comando com privilégios elevados."
+    }
+  ],
+  "Docker — Comandos Essenciais": [
+    {
+      "nome": "history",
+      "categoria": "Histórico de comandos",
+      "definicao": "Exibe o histórico de comandos executados no terminal.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra os comandos executados recentemente no terminal.",
+      "dicas_de_uso": "Use !numero  para executar um comando do histórico, onde \"numero\" é o índice do comando."
+    },
+    {
+      "nome": "docker build",
+      "categoria": "Imagens",
+      "definicao": "Cria uma imagem Docker a partir de um Dockerfile .",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando lê o Dockerfile  no diretório atual ( .) e gera uma imagem nomeada como minha-imagem  com a tag 1.0 .",
+      "dicas_de_uso": "Use nomes e tags descritivos. Crie um .dockerignore  para evitar arquivos desnecessários na imagem."
+    },
+    {
+      "nome": "docker run",
+      "categoria": "Contêineres",
+      "definicao": "Executa um contêiner a partir de uma imagem.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Inicia o app em segundo plano ( -d), mapeando a porta local 3000 para a porta 3000 do contêiner.",
+      "dicas_de_uso": "Combine com --name nome  para facilitar o controle do contêiner depois."
+    },
+    {
+      "nome": "docker ps",
+      "categoria": "Gerenciamento de contêineres",
+      "definicao": "Lista os contêineres em execução.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Exibe os IDs, nomes, imagens, portas e status dos contêineres que estão rodando.",
+      "dicas_de_uso": "Use docker ps -a para ver até os contêineres parados."
+    },
+    {
+      "nome": "docker exec",
+      "categoria": "Execução em contêineres",
+      "definicao": "Executa comandos dentro de um contêiner em execução.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Abre um terminal interativo ( bash , por exemplo) dentro do contêiner.",
+      "dicas_de_uso": "Ótimo para depurar ou inspecionar o ambiente de um contêiner em tempo real."
+    },
+    {
+      "nome": "docker stop",
+      "categoria": "Encerramento",
+      "definicao": "Para a execução de um contêiner.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Encerra um contêiner ativo com segurança, liberando os recursos do sistema.",
+      "dicas_de_uso": "Use antes de remover contêineres com docker rm ."
+    },
+    {
+      "nome": "docker-compose up",
+      "categoria": "Orquestração",
+      "definicao": "Inicia múltiplos contêineres definidos no docker-compose.yml .",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Sobe toda a stack definida no arquivo (banco de dados, app, cache etc.) em segundo plano.",
+      "dicas_de_uso": "Combine com --build  para forçar uma reconstrução das imagens. Ideal para ambientes locais completos."
+    },
+    {
+      "nome": "docker rmi",
+      "categoria": "Imagens",
+      "definicao": "Remove imagens Docker.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Apaga imagens que não estão mais sendo usadas para liberar espaço.",
+      "dicas_de_uso": "Combine com docker image prune  para limpeza automática."
+    },
+    {
+      "nome": "docker pull",
+      "categoria": "Imagens",
+      "definicao": "Baixa uma imagem de um repositório Docker remoto (ex: Docker Hub).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando baixa uma imagem específica do Docker Hub ou de outro repositório remoto. Você pode usar tags para versões específicas.",
+      "dicas_de_uso": "Verifique sempre a versão da imagem que você deseja usar para garantir a compatibilidade com o seu projeto."
+    },
+    {
+      "nome": "docker push",
+      "categoria": "Imagens",
+      "definicao": "Envia uma imagem para um repositório remoto (ex: Docker Hub).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando envia a imagem gerada no seu repositório local para um repositório remoto, tornando -a disponível para outros sistemas.",
+      "dicas_de_uso": "Verifique se você está logado no Docker Hub ou no repositório remoto antes de executar o comando ( docker login )."
+    },
+    {
+      "nome": "docker logs",
+      "categoria": "Depuração",
+      "definicao": "Exibe os logs de um contêiner em execução ou parado.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Exibe a saída de logs de um contêiner, útil para depuração ou monitoramento de atividades do contêiner.",
+      "dicas_de_uso": "Use a opção -f para seguir os logs em tempo real (similar ao tail -f)."
+    },
+    {
+      "nome": "docker rm",
+      "categoria": "Remoção de contêineres",
+      "definicao": "Remove um ou mais contêineres.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Remove o contêiner especificado. Se o contêiner estiver em execução, use docker stop  primeiro para pará -lo antes de removê -lo.",
+      "dicas_de_uso": "Use docker rm -f para forçar a remoção de um contêiner em execução."
+    },
+    {
+      "nome": "docker network ls",
+      "categoria": "Redes",
+      "definicao": "Lista as redes Docker disponíveis.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Exibe todas as redes definidas no seu sistema Docker, incluindo redes criadas automaticamente.",
+      "dicas_de_uso": "Combine com docker network inspect  para obter detalhes sobre uma rede específica."
+    },
+    {
+      "nome": "docker volume ls",
+      "categoria": "Volumes",
+      "definicao": "Lista os volumes Docker disponíveis.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra todos os volumes criados e armazenados no Docker, que podem ser usados para persistir dados entre contêineres.",
+      "dicas_de_uso": "Combine com docker volume inspect  para obter mais detalhes sobre um volume específico."
+    },
+    {
+      "nome": "docker exec –it",
+      "categoria": "Execução interativa em contêineres",
+      "definicao": "Executa um comando em um contêiner de forma interativa.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Abre um terminal interativo no contêiner para você executar comandos diretamente nele.",
+      "dicas_de_uso": "Combine com -u para especificar o usuário no qual o comando será executado dentro do contêiner."
+    }
+  ],
+  "Banco de Dados (SQL)": [
+    {
+      "nome": "docker inspect",
+      "categoria": "Inspeção de objetos Docker",
+      "definicao": "Retorna informações detalhadas sobre objetos Docker (imagens,",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Exibe informações detalhadas sobre um contêiner, imagem, volume ou rede, como configurações, volumes montados, variáveis de ambiente, entre outras.",
+      "dicas_de_uso": "Use em conjunto com grep  para filtrar informações específicas, por exemplo, docker inspect nome_do_conteiner | grep IPAddress ."
+    },
+    {
+      "nome": "SELECT",
+      "categoria": "Consulta de dados",
+      "definicao": "Recupera dados de uma ou mais tabelas.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Este comando busca os nomes e e -mails de todos os usuários ativos ( ativo = 1 ) na tabela usuarios .",
+      "dicas_de_uso": "Use LIMIT  para testes e ORDER BY  para organizar os resultados."
+    },
+    {
+      "nome": "INSERT",
+      "categoria": "Inserção de dados",
+      "definicao": "Insere novos registros em uma tabela.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Adiciona um novo produto chamado \"Teclado\" com preço de 99.90 à tabela produtos .",
+      "dicas_de_uso": "Confirme os nomes das colunas e os tipos de dados para evitar erros."
+    },
+    {
+      "nome": "UPDATE",
+      "categoria": "Atualização de dados",
+      "definicao": "Altera dados existentes em uma ou mais linhas.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Atualiza a senha do usuário com ID 5.",
+      "dicas_de_uso": "SEMPRE use WHERE , senão você atualizará todos os registros da tabela!"
+    },
+    {
+      "nome": "DELETE",
+      "categoria": "Remoção de dados",
+      "definicao": "Remove registros de uma tabela.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Remove todos os usuários que estão inativos (ativo = 0).",
+      "dicas_de_uso": "Faça backup ou use DELETE  com cautela em produção."
+    },
+    {
+      "nome": "JOIN",
+      "categoria": "Relacionamento entre tabelas",
+      "definicao": "Une registros de duas ou mais tabelas com base em uma relação.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Retorna os IDs dos pedidos junto com o nome dos usuários que os fizeram.",
+      "dicas_de_uso": "Conheça INNER JOIN , LEFT JOIN , RIGHT JOIN  e FULL OUTER JOIN  para diferentes cenários."
+    },
+    {
+      "nome": "WHERE",
+      "categoria": "Filtro de dados",
+      "definicao": "Restringe os resultados de uma consulta com base em condições.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Seleciona todos os produtos com preço acima de 100.",
+      "dicas_de_uso": "Combine com operadores ( AND , OR, LIKE , IN, BETWEEN ) para filtros mais avançados."
+    },
+    {
+      "nome": "GROUP BY",
+      "categoria": "Agrupamento de resultados",
+      "definicao": "Agrupa linhas com valores iguais e permite usar funções agregadas.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Conta quantos produtos existem por categoria.",
+      "dicas_de_uso": "Sempre combine com funções como COUNT() , SUM() , AVG() ."
+    },
+    {
+      "nome": "ALTER TABLE",
+      "categoria": "Modificação de estrutura",
+      "definicao": "Modifica a estrutura de uma tabela, como adicionar, alterar ou excluir",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando adiciona uma nova coluna chamada descricao  do tipo TEXT  à tabela produtos .",
+      "dicas_de_uso": "Use com cuidado, especialmente em tabelas grandes, pois pode impactar a performance."
+    },
+    {
+      "nome": "DROP TABLE",
+      "categoria": "Remoção de estrutura",
+      "definicao": "Exclui uma tabela do banco de dados, apagando todos os seus dados e",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Exclui a tabela produtos  se ela existir. Cuidado, pois todos os dados serão apagados permanentemente!",
+      "dicas_de_uso": "Utilize com cautela, sempre em um ambiente controlado, e após fazer backup, se necessário."
+    },
+    {
+      "nome": "TRUNCATE TABLE",
+      "categoria": "Remoção de dados",
+      "definicao": "Remove todos os registros de uma tabela, mas mantém a estrutura da",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando apaga todos os dados da tabela produtos  de forma mais eficiente do que DELETE , mas não gera logs de transação para cada linha excluída.",
+      "dicas_de_uso": "Use quando precisar excluir todos os dados rapidamente e sem necessidade de recuperação, já que não pode ser revertido como uma transação com ROLLBACK ."
+    },
+    {
+      "nome": "INDEX",
+      "categoria": "Otimização de consultas",
+      "definicao": "Cria um índice para melhorar a velocidade das consultas em colunas",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria um índice na coluna nome  da tabela produtos , acelerando buscas por essa coluna.",
+      "dicas_de_uso": "Índices melhoram a velocidade de leitura, mas podem afetar a performance de inserções e atualizações. Use com cautela."
+    },
+    {
+      "nome": "HAVING",
+      "categoria": "Filtro de resultados (após agrupamento)",
+      "definicao": "Filtra os resultados após o agrupamento de dados com GROUP BY .",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando retorna as categorias de produtos que têm mais de 5 produtos cadastrados.",
+      "dicas_de_uso": "Use HAVING  quando precisar aplicar um filtro após o uso de GROUP BY. Não confunda com WHERE , que filtra antes do agrupamento."
+    },
+    {
+      "nome": "INNER JOIN",
+      "categoria": "Relacionamento entre tabelas",
+      "definicao": "Retorna apenas as linhas que têm correspondência em ambas as",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando retorna o nome dos usuários e os IDs dos pedidos feitos, mas apenas para usuários que tenham pedidos relacionados.",
+      "dicas_de_uso": "INNER JOIN  é o tipo mais comum de junção entre tabelas. Para pegar todos os registros de uma tabela e apenas os correspondentes na outra, use LEFT JOIN ."
+    },
+    {
+      "nome": "UNION",
+      "categoria": "Combinação de resultados",
+      "definicao": "Combina os resultados de duas ou mais consultas SELECT .",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando retorna todos os nomes dos clientes  e fornecedores , sem duplicar os valores.",
+      "dicas_de_uso": "UNION  elimina duplicatas por padrão. Se quiser incluir duplicatas, use UNION ALL ."
+    },
+    {
+      "nome": "Administração de Banco de Dados (DBA)",
+      "categoria": "Infraestrutura / Dados",
+      "definicao": "Gerência técnica de bancos de dados, garantindo disponibilidade,",
+      "explicacao_pratica": " O DBA controla acessos, realiza tuning, faz backup/restores, e garante que os dados estejam íntegros e disponíveis. Ferramentas e comandos úteis: • MySQL:  mysqldump , mysqladmin , GRANT • PostgreSQL:  psql , pg_dump , pg_restore • Oracle, SQL Server Exemplo de backup com MySQL: Criar usuário com acesso em PostgreSQL:"
+    },
+    {
+      "nome": "Modelagem de Dados",
+      "categoria": "Projeto / Estrutura",
+      "definicao": "Processo de organizar os dados em entidades e relacionamentos,",
+      "explicacao_pratica": " A base para bancos bem estruturados. Inclui MER (modelo entidade -relacionamento), normalização e chaves primárias/estrangeiras. Ferramentas:  dbdiagram.io, Draw.io, MySQL Workbench, ER/Studio Exemplo de modelo simples: • Entidade: Cliente  → id, nome, email • Entidade: Pedido  → id, data, cliente_id • Relacionamento: Cliente 1:N Pedido"
+    },
+    {
+      "nome": "Otimização de Performance (Query Tuning)",
+      "categoria": "Performance / Back -end",
+      "definicao": "Técnicas para melhorar a velocidade e eficiência das consultas",
+      "explicacao_pratica": " Envolve criação de índices, reescrita de queries, análise de planos de execução e particionamento. Ferramentas e técnicas: • EXPLAIN , ANALYZE  (PostgreSQL) • Índices B -Tree e Hash • Query profiler (MySQL Workbench) Exemplo (ver plano de execução): Dicas práticas: • Use LIMIT  em grandes seleções • Prefira colunas indexadas em filtros ( WHERE ) • Evite SELECT *  em produção"
+    }
+  ],
+  "Node.js / NPM — Comandos Úteis": [
+    {
+      "nome": "Big Data",
+      "categoria": "Dados em larga escala",
+      "definicao": "Conjunto de dados tão volumoso, veloz ou variado que requer",
+      "explicacao_pratica": " Usado em análises preditivas, sistemas com milhões de registros, logs de aplicações, IoT, etc. Tecnologias populares:  Hadoop, Spark, Kafka, Hive, NoSQL (MongoDB, Cassandra) Exemplo com MongoDB (NoSQL): Conceito dos 5 V's do Big Data: • Volume:  Grande quantidade • Velocidade:  Alta geração/análise • Variedade:  Dados estruturados e não estruturados • Veracidade:  Dados confiáveis • Valor:  Relevância extraída da análise"
+    },
+    {
+      "nome": "npm install",
+      "categoria": "Instalação de pacotes",
+      "definicao": "Instala todas as dependências listadas no package.json  ou um",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Instala o pacote express  e o adiciona à seção de dependências do seu projeto.",
+      "dicas_de_uso": "Use --save-dev  para dependências de desenvolvimento (como jest , eslint )."
+    },
+    {
+      "nome": "npm run start",
+      "categoria": "Scripts",
+      "definicao": "Executa o script start  definido no package.json .",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Inicia o servidor ou aplicação, geralmente configurado em scripts: { \"start\": \"node index.js\" } .",
+      "dicas_de_uso": "Você pode customizar vários scripts como npm run dev , npm run lint , etc."
+    },
+    {
+      "nome": "npm run build",
+      "categoria": "Build de produção",
+      "definicao": "Executa o script de build definido no projeto, geralmente para gerar",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Gera a versão final da aplicação para deploy (em React, por exemplo, cria a pasta /build ).",
+      "dicas_de_uso": "Sempre rode antes de deployar um front -end."
+    },
+    {
+      "nome": "npx create -react-app",
+      "categoria": "Inicialização de projetos",
+      "definicao": "Executa diretamente um pacote sem precisar instalá -lo globalmente.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria um novo projeto React do zero com todas as configurações iniciais prontas.",
+      "dicas_de_uso": "Use npx  sempre que quiser rodar um CLI moderno sem instalar globalmente."
+    },
+    {
+      "nome": "npm outdated",
+      "categoria": "Atualização",
+      "definicao": "Mostra quais dependências do projeto estão desatualizadas.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra versão atual, versão desejada e versão mais recente de cada dependência.",
+      "dicas_de_uso": "Use antes de atualizar pacotes com npm update  ou npm install pacote@latest ."
+    },
+    {
+      "nome": "npm uninstall",
+      "categoria": "Remoção de pacotes",
+      "definicao": "Remove pacotes instalados no projeto.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Remove o pacote lodash  do projeto e do package.json .",
+      "dicas_de_uso": "Use com --save-dev  se a dependência estiver em devDependencies."
+    },
+    {
+      "nome": "npm init",
+      "categoria": "Inicialização",
+      "definicao": "Cria um novo package.json  interativamente.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Ideal para iniciar um novo projeto Node.js com configurações personalizadas.",
+      "dicas_de_uso": "Use npm init -y para pular as perguntas e gerar rapidamente."
+    },
+    {
+      "nome": "npm update",
+      "categoria": "Atualização de pacotes",
+      "definicao": "Atualiza os pacotes do projeto para a versão mais recente que atenda",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Atualiza todos os pacotes listados no package.json  para a versão mais recente dentro das versões especificadas.",
+      "dicas_de_uso": "Use antes de fazer o deploy para garantir que todas as dependências estão na versão mais recente compatível."
+    },
+    {
+      "nome": "npm audit",
+      "categoria": "Segurança",
+      "definicao": "Analisa as dependências do projeto em busca de vulnerabilidades",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Esse comando verifica as dependências e retorna um relatório de vulnerabilidades, recomendando pacotes a serem atualizados.",
+      "dicas_de_uso": "Regularmente rode npm audit  para manter seu projeto seguro. Combine com npm audit fix  para corrigir automaticamente as vulnerabilidades, se possível."
+    },
+    {
+      "nome": "npm run test",
+      "categoria": "Scripts",
+      "definicao": "Executa os testes definidos no script test  no package.json .",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Roda os testes automatizados do seu projeto, geralmente configurados com frameworks como Jest ou Mocha.",
+      "dicas_de_uso": "Pode ser usado em integração contínua (CI) para garantir que o código esteja sempre funcionando corretamente."
+    },
+    {
+      "nome": "npm link",
+      "categoria": "Desenvolvimento local",
+      "definicao": "Cria um link simbólico global para um pacote local, facilitando testes e",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Permite usar pacotes que estão em desenvolvimento local, sem precisar publicá -los no NPM.",
+      "dicas_de_uso": "Use npm link  no diretório do pacote que você está desenvolvendo, depois use npm link nome -do-pacote  no projeto que deseja testar."
+    },
+    {
+      "nome": "npm ls",
+      "categoria": "Listagem de pacotes",
+      "definicao": "Exibe a árvore de dependências do projeto.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra a estrutura das dependências instaladas e suas versões, útil para depurar conflitos ou garantir a versão correta.",
+      "dicas_de_uso": "Combine com npm ls --depth=0  para listar apenas as dependências de primeiro nível."
+    },
+    {
+      "nome": "npm config",
+      "categoria": "Configuração de NPM",
+      "definicao": "Permite configurar ou consultar as configurações do NPM.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Define configurações como autor, licença e repositório para projetos, facilitando a configuração do package.json .",
+      "dicas_de_uso": "Use npm config get  para verificar configurações atuais."
+    }
+  ],
+  "React CLI / Angular CLI / Flutter CLI": [
+    {
+      "nome": "npm cache clean",
+      "categoria": "Limpeza de cache",
+      "definicao": "Limpa o cache do NPM, útil para corrigir problemas de pacotes",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Se algum pacote não estiver funcionando corretamente ou se o NPM estiver travando, limpar o cache pode resolver.",
+      "dicas_de_uso": "Use com cautela, pois a limpeza do cache pode resultar em downloads repetidos de pacotes. ⚛️ React CLI (via NPX)"
+    },
+    {
+      "nome": "npx create -react-app",
+      "categoria": "Criação de projeto",
+      "definicao": "Cria uma estrutura completa de projeto React.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Gera um projeto React com Webpack, Babel e configuração inicial pronta.",
+      "dicas_de_uso": "Use --template typescript  para criar com TypeScript:"
+    },
+    {
+      "nome": "npm start",
+      "categoria": "Execução",
+      "definicao": "Roda o servidor de desenvolvimento do React.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Abre a aplicação localmente em http://localhost:3000 .",
+      "dicas_de_uso": "Útil para ver mudanças em tempo real (hot reload)."
+    },
+    {
+      "nome": "npx react -scripts test",
+      "categoria": "Testes",
+      "definicao": "Executa os testes do projeto configurado com React.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Roda os testes automatizados configurados com Jest.",
+      "dicas_de_uso": "Ideal para rodar testes unitários em React."
+    },
+    {
+      "nome": "npm run build",
+      "categoria": "Build de Produção",
+      "definicao": "Compila a aplicação para produção, criando a versão otimizada do",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria uma versão da aplicação pronta para produção, com otimizações como minificação e redução do tamanho do bundle.",
+      "dicas_de_uso": "Execute sempre antes de realizar o deploy da aplicação."
+    },
+    {
+      "nome": "npm run lint",
+      "categoria": "Qualidade de Código",
+      "definicao": "Executa o linting no código fonte, verificando erros de sintaxe e",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Verifica o código em busca de inconsistências de estilo, erros e possíveis melhorias.",
+      "dicas_de_uso": "Use ESLint para garantir que seu código siga boas práticas e evitar bugs."
+    },
+    {
+      "nome": "npm run eject",
+      "categoria": "Configuração avançada",
+      "definicao": "Expõe a configuração interna do projeto do create-react-app ,",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Permite que você acesse as configurações padrão do create-react-app  e modifique conforme necessário.",
+      "dicas_de_uso": "Use com cautela . Depois de usar eject , não há como voltar ao estado anterior. É útil se você precisar de mais controle sobre a configuração."
+    },
+    {
+      "nome": "npm run test -- --coverage",
+      "categoria": "Testes e Cobertura",
+      "definicao": "Executa os testes e gera um relatório de cobertura de código.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Além de rodar os testes, esse comando verifica a cobertura do código, mostrando quais partes do código foram testadas.",
+      "dicas_de_uso": "Útil para medir a eficácia dos testes e verificar se todas as funcionalidades estão sendo cobertas."
+    },
+    {
+      "nome": "npx create -react -app my -app --template redux",
+      "categoria": "Criação de projeto com template específico",
+      "definicao": "Cria um projeto React com integração de Redux já configurada.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria um projeto React com a estrutura básica de Redux já configurada, permitindo que você comece a trabalhar com gerenciamento de estado de maneira rápida.",
+      "dicas_de_uso": "Ideal para quem deseja usar Redux em vez do estado local do React."
+    },
+    {
+      "nome": "npm audit",
+      "categoria": "Auditoria de segurança",
+      "definicao": "Verifica dependências de segurança conhecidas em seu projeto.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Verifica se há vulnerabilidades conhecidas nas dependências do projeto.",
+      "dicas_de_uso": "Execute regularmente para garantir que o projeto não possua vulnerabilidades de segurança. 🅰️ Angular CLI"
+    },
+    {
+      "nome": "ng new",
+      "categoria": "Criação de projeto",
+      "definicao": "Cria um novo projeto Angular com estrutura padrão.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Gera toda a arquitetura básica do Angular, incluindo roteamento e testes.",
+      "dicas_de_uso": "Use --routing  e --style=scss  para opções adicionais na criação."
+    },
+    {
+      "nome": "ng serve",
+      "categoria": "Execução",
+      "definicao": "Inicia o servidor de desenvolvimento.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Roda o app localmente e recarrega automaticamente ao salvar mudanças.",
+      "dicas_de_uso": "Use --open  para já abrir no navegador:"
+    },
+    {
+      "nome": "ng generate component",
+      "categoria": "Geração de componentes",
+      "definicao": "Cria um novo componente Angular.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria a pasta do componente com HTML, CSS, TS e arquivo de teste.",
+      "dicas_de_uso": "Também funciona para service , module , guard , pipe ."
+    },
+    {
+      "nome": "ng generate module",
+      "categoria": "Geração de módulos",
+      "definicao": "Cria um novo módulo Angular.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria a estrutura de um novo módulo no Angular, incluindo o arquivo nome-do- modulo.module.ts .",
+      "dicas_de_uso": "Use módulos para organizar funcionalidades relacionadas em uma aplicação Angular."
+    },
+    {
+      "nome": "ng generate service",
+      "categoria": "Geração de serviços",
+      "definicao": "Cria um novo serviço Angular.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria a estrutura de um novo serviço Angular, incluindo o arquivo nome-do- serviço.service.ts .",
+      "dicas_de_uso": "Use serviços para lógica de negócios ou para interagir com APIs externas."
+    },
+    {
+      "nome": "ng generate pipe",
+      "categoria": "Geração de pipes",
+      "definicao": "Cria um novo pipe Angular.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria a estrutura de um novo pipe, que pode ser usado para transformar dados nas views do Angular.",
+      "dicas_de_uso": "Pipes são úteis para formatação de dados, como datas, moedas, ou até mesmo para aplicar filtros personalizados."
+    },
+    {
+      "nome": "ng build",
+      "categoria": "Build de produção",
+      "definicao": "Compila o código da aplicação para produção.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Gera uma versão otimizada da aplicação, pronta para ser implantada.",
+      "dicas_de_uso": "Sempre utilize --prod  para garantir que as otimizações, como minificação e tree shaking, sejam aplicadas."
+    },
+    {
+      "nome": "ng test",
+      "categoria": "Testes",
+      "definicao": "Executa os testes da aplicação usando o Karma.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Roda os testes unitários configurados com o Karma e o Jasmine.",
+      "dicas_de_uso": "Use este comando para garantir que o código da sua aplicação esteja funcionando corretamente durante o desenvolvimento."
+    },
+    {
+      "nome": "ng lint",
+      "categoria": "Qualidade de código",
+      "definicao": "Executa a análise estática de código (linting).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Verifica o código para encontrar erros de estilo ou padrões de código inconsistentes.",
+      "dicas_de_uso": "Pode ser configurado para seguir convenções específicas de estilo de código, como o ESLint ou TSLint."
+    },
+    {
+      "nome": "ng add",
+      "categoria": "Adicionar dependências",
+      "definicao": "Adiciona pacotes ou bibliotecas ao projeto Angular.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Instala e configura automaticamente bibliotecas externas no projeto. No exemplo, o Angular Material é adicionado ao projeto.",
+      "dicas_de_uso": "Use para integrar facilmente bibliotecas e ferramentas ao seu projeto Angular."
+    },
+    {
+      "nome": "ng e2e",
+      "categoria": "Testes de integração (end -to-end)",
+      "definicao": "Executa os testes end -to-end da aplicação usando o Protractor.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Executa testes de integração para garantir que todos os fluxos de trabalho da aplicação funcionem corretamente do início ao fim.",
+      "dicas_de_uso": "Essencial para testar a aplicação como um todo em diferentes cenários. 🐦 Flutter CLI"
+    },
+    {
+      "nome": "flutter create",
+      "categoria": "Criação de projeto",
+      "definicao": "Cria um novo projeto Flutter.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Gera uma aplicação Flutter básica com suporte a Android, iOS, Web, etc.",
+      "dicas_de_uso": "Você pode usar --org com.suaempresa  para definir o namespace do app."
+    },
+    {
+      "nome": "flutter run",
+      "categoria": "Execução",
+      "definicao": "Executa o app em um dispositivo/emulador conectado.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Roda o app Flutter diretamente em um dispositivo físico ou simulado.",
+      "dicas_de_uso": "Use -d chrome  para rodar direto no navegador."
+    },
+    {
+      "nome": "flutter build",
+      "categoria": "Build",
+      "definicao": "Gera a versão de produção do app.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Gera o arquivo .apk  para Android. Pode usar também web , ios , windows  etc.",
+      "dicas_de_uso": "Use --release  para builds otimizados."
+    },
+    {
+      "nome": "flutter doctor",
+      "categoria": "Diagnóstico",
+      "definicao": "Verifica a instalação do Flutter e do ambiente de desenvolvimento.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Verifica se o Flutter e suas dependências estão instalados corretamente, como o Android Studio, Xcode, dispositivos conectados, etc.",
+      "dicas_de_uso": "Sempre execute após a instalação para garantir que o ambiente está configurado corretamente."
+    },
+    {
+      "nome": "flutter upgrade",
+      "categoria": "Atualização",
+      "definicao": "Atualiza o Flutter para a versão mais recente.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Atualiza o Flutter SDK para a versão mais recente, incluindo pacotes e dependências.",
+      "dicas_de_uso": "Utilize regularmente para garantir que você está utilizando as últimas melhorias e correções de bugs."
+    },
+    {
+      "nome": "flutter clean",
+      "categoria": "Limpeza",
+      "definicao": "Limpa arquivos temporários e reconstruir o projeto.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Remove arquivos gerados durante a compilação, como caches e builds intermediários.",
+      "dicas_de_uso": "Útil para resolver problemas de compilação e garantir que o projeto seja recompilado do zero."
+    },
+    {
+      "nome": "flutter pub get",
+      "categoria": "Gerenciamento de dependências",
+      "definicao": "Baixa e instala as dependências listadas no arquivo pubspec.yaml .",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Baixa todas as dependências necessárias para o seu projeto Flutter a partir do repositório de pacotes.",
+      "dicas_de_uso": "Use após adicionar novas dependências no pubspec.yaml  ou quando configurar um novo projeto."
+    },
+    {
+      "nome": "flutter analyze",
+      "categoria": "Análise estática de código",
+      "definicao": "Executa uma análise estática do código para verificar por erros e",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Verifica o código em busca de erros e advertências, além de sugerir boas práticas de codificação.",
+      "dicas_de_uso": "Execute antes de fazer commit ou push para garantir a qualidade do código."
+    },
+    {
+      "nome": "flutter emulators",
+      "categoria": "Gerenciamento de emuladores",
+      "definicao": "Lista os emuladores de dispositivos disponíveis para execução.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra os emuladores de Android ou iOS configurados em seu ambiente de desenvolvimento.",
+      "dicas_de_uso": "Use este comando para verificar se os emuladores estão corretamente configurados antes de rodar o app."
+    },
+    {
+      "nome": "flutter install",
+      "categoria": "Instalação em dispositivos",
+      "definicao": "Instala o aplicativo no dispositivo ou emulador conectado.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Instala a versão mais recente do app diretamente no dispositivo ou emulador conectado.",
+      "dicas_de_uso": "Use este comando após construir o app para ver as alterações no dispositivo real."
+    }
+  ],
+  "DevOps — Conceitos e Comandos Básicos": [
+    {
+      "nome": "flutter channel",
+      "categoria": "Gerenciamento de canais",
+      "definicao": "Muda o canal de versão do Flutter (stable, beta, dev).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Permite alternar entre diferentes versões do Flutter (estável, beta, desenvolvimento).",
+      "dicas_de_uso": "Use flutter channel  para alternar entre canais de desenvolvimento conforme necessário."
+    },
+    {
+      "nome": "CI/CD (Integração e Entrega Contínuas)",
+      "categoria": "Processo de desenvolvimento",
+      "definicao": "CI (Continuous Integration) automatiza testes e builds; CD (Continuous",
+      "explicacao_pratica": " Sempre que há um git push , a pipeline de CI executa testes, compila a aplicação e, se tudo estiver OK, a CD envia automaticamente para produção.",
+      "dicas_de_uso": "Ferramentas populares incluem GitHub Actions, GitLab CI, Jenkins, CircleCI."
+    },
+    {
+      "nome": "Pipeline",
+      "categoria": "Automação",
+      "definicao": "Conjunto de etapas automatizadas que compõem a entrega de",
+      "explicacao_pratica": " Um arquivo .yaml  define uma pipeline: por exemplo, instalar dependências, rodar testes, e publicar o app.",
+      "dicas_de_uso": "Separe as etapas por ambiente: build → test → staging → produção."
+    },
+    {
+      "nome": "Build",
+      "categoria": "Etapa de pipeline",
+      "definicao": "Processo de transformar o código -fonte em um artefato executável.",
+      "explicacao_pratica": " No front -end, é gerar arquivos minificados ( build/ ). No back -end, pode ser compilar um binário.",
+      "dicas_de_uso": "Sempre versionar os builds; evite builds \"na máquina local\"."
+    },
+    {
+      "nome": "Deploy",
+      "categoria": "Entrega",
+      "definicao": "Ação de colocar uma aplicação em um ambiente acessível (produção,",
+      "explicacao_pratica": "Pode ser feito com ferramentas como Docker, Kubernetes, ou via FTP/SFTP em projetos simples.",
+      "dicas_de_uso": "Automatize com scripts ou pipelines, evite deploys manuais."
+    },
+    {
+      "nome": "Rollback",
+      "categoria": "Segurança / Recuperação",
+      "definicao": "Ato de voltar a uma versão anterior quando o deploy novo apresenta",
+      "explicacao_pratica": " Caso uma nova versão cause bugs, é possível restaurar o build anterior automaticamente.",
+      "dicas_de_uso": "Mantenha os últimos artefatos disponíveis; sempre teste antes de deploy."
+    },
+    {
+      "nome": "Feature Flag",
+      "categoria": "Controle de funcionalidades",
+      "definicao": "Técnica para ativar/desativar partes do código em produção sem novo",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Permite testar uma feature apenas para alguns usuários antes de liberar para todos.",
+      "dicas_de_uso": "Use bibliotecas como LaunchDarkly , Unleash , ou sistemas internos simples com variáveis de ambiente."
+    },
+    {
+      "nome": "Blue/Green Deploy",
+      "categoria": "Estratégia de deploy",
+      "definicao": "Técnica onde duas versões do sistema convivem: uma ativa (green),",
+      "explicacao_pratica": " Você testa a versão nova (blue), e só depois muda o tráfego para ela. Se der problema, volta rapidamente para a versão anterior (green).",
+      "dicas_de_uso": "Muito usada em sistemas críticos para evitar downtime."
+    },
+    {
+      "nome": "kubectl apply",
+      "categoria": "Kubernetes",
+      "definicao": "Aplica ou atualiza configurações em recursos do Kubernetes a partir de",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Usado para criar ou atualizar recursos no Kubernetes, como pods, deployments, services, etc.",
+      "dicas_de_uso": "Ideal para definir configurações de infraestrutura como código."
+    },
+    {
+      "nome": "kubectl get",
+      "categoria": "Kubernetes",
+      "definicao": "Exibe recursos no Kubernetes, como pods, deployments, services.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Lista os pods em execução no cluster Kubernetes.",
+      "dicas_de_uso": "Combine com -o wide  para ver mais detalhes sobre os recursos."
+    },
+    {
+      "nome": "helm install",
+      "categoria": "Kubernetes / Gerenciamento de pacotes",
+      "definicao": "Instala um pacote Helm (um gráfico de Kubernetes).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Instala um pacote Helm para facilitar o gerenciamento de aplicativos Kubernetes.",
+      "dicas_de_uso": "Helm simplifica a instalação e gerenciamento de aplicações complexas no Kubernetes."
+    },
+    {
+      "nome": "terraform init",
+      "categoria": "Infraestrutura como código (IaC)",
+      "definicao": "Inicializa um diretório de configuração do Terraform, preparando para",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Prepara o ambiente do Terraform para que você possa criar e gerenciar infraestrutura.",
+      "dicas_de_uso": "Execute sempre no início de um novo projeto Terraform."
+    },
+    {
+      "nome": "terraform apply",
+      "categoria": "Infraestrutura como código (IaC)",
+      "definicao": "Aplica as configurações de infraestrutura descritas nos arquivos",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria ou altera a infraestrutura conforme definido no código Terraform.",
+      "dicas_de_uso": "Sempre revise o plano antes de confirmar a aplicação de mudanças."
+    },
+    {
+      "nome": "ansible -playbook",
+      "categoria": "Automação de configuração",
+      "definicao": "Executa um playbook Ansible para automatizar a configuração de",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Automatiza tarefas de configuração em servidores, como instalação de pacotes ou configuração de serviços.",
+      "dicas_de_uso": "Combine com -v para exibir mais detalhes durante a execução."
+    }
+  ],
+  "AWS CLI / Azure CLI — Comandos Básicos": [
+    {
+      "nome": "gitlab -ci.yml",
+      "categoria": "GitLab CI/CD",
+      "definicao": "Arquivo de configuração do GitLab CI para definir as etapas da pipeline",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Define as etapas da pipeline (build, test, deploy) no GitLab, permitindo automação.",
+      "dicas_de_uso": "O arquivo .gitlab-ci.yml  deve ser colocado no repositório para o GitLab executar as etapas configuradas. ☁️ AWS CLI (Amazon Web Services)"
+    },
+    {
+      "nome": "aws configure",
+      "categoria": "Configuração",
+      "definicao": "Configura o perfil de acesso à AWS.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Você insere sua AWS Access Key , Secret , região e formato de saída.",
+      "dicas_de_uso": "Armazena credenciais localmente em ~/.aws/credentials ."
+    },
+    {
+      "nome": "aws s3 cp",
+      "categoria": "Upload/Download de arquivos",
+      "definicao": "Copia arquivos entre seu computador e o Amazon S3.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Faz o upload de arquivos para buckets S3. Pode também baixar com a mesma sintaxe.",
+      "dicas_de_uso": "Use --recursive  para copiar diretórios inteiros."
+    },
+    {
+      "nome": "aws ec2 start -instances",
+      "categoria": "Gerenciamento de instâncias",
+      "definicao": "Inicia uma ou mais instâncias EC2.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Liga a instância virtual (servidor EC2) usando o ID.",
+      "dicas_de_uso": "Use stop-instances  para desligar e describe -instances  para consultar status."
+    },
+    {
+      "nome": "aws lambda invoke",
+      "categoria": "Funções serverless",
+      "definicao": "Executa uma função Lambda via linha de comando.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Executa a função e salva a resposta em output.json .",
+      "dicas_de_uso": "Muito útil para testar funções diretamente sem precisar de trigger externa."
+    },
+    {
+      "nome": "aws s3 sync",
+      "categoria": "Upload/Download de arquivos",
+      "definicao": "Sincroniza arquivos entre diretórios locais e buckets do S3.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Sincroniza os arquivos entre a pasta local e o bucket do S3, copiando apenas os arquivos que mudaram.",
+      "dicas_de_uso": "Ideal para backup e atualização incremental de arquivos no S3."
+    },
+    {
+      "nome": "aws ec2 describe -instances",
+      "categoria": "Gerenciamento de instâncias",
+      "definicao": "Exibe detalhes sobre as instâncias EC2.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra informações detalhadas sobre as instâncias EC2, como ID, estado, IP, entre outros.",
+      "dicas_de_uso": "Use filtros para consultar instâncias específicas, como -- instance -ids  ou --filters ."
+    },
+    {
+      "nome": "aws ec2 terminate -instances",
+      "categoria": "Gerenciamento de instâncias",
+      "definicao": "Encerra uma ou mais instâncias EC2.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Desliga e deleta uma instância EC2 específica.",
+      "dicas_de_uso": "Tenha cuidado ao usar, pois as instâncias serão destruídas e seus dados podem ser perdidos se não forem salvos."
+    },
+    {
+      "nome": "aws sts get -caller -identity",
+      "categoria": "Segurança",
+      "definicao": "Exibe informações sobre a identidade do usuário que está autenticado",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Retorna informações como o ARN, ID da conta e ID de sessão da identidade atual.",
+      "dicas_de_uso": "Útil para verificar se você está autenticado corretamente e para debug de permissões."
+    },
+    {
+      "nome": "aws iam create -user",
+      "categoria": "Gerenciamento de usuários",
+      "definicao": "Cria um novo usuário no AWS Identity and Access Management (IAM).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria um novo usuário no IAM com o nome especificado.",
+      "dicas_de_uso": "Após criar o usuário, você pode adicionar permissões e acessar a AWS com esse usuário."
+    },
+    {
+      "nome": "aws rds describe -db-instances",
+      "categoria": "Gerenciamento de banco de dados",
+      "definicao": "Exibe informações sobre instâncias do Amazon RDS.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Mostra detalhes sobre as instâncias de banco de dados no RDS, como status, tipo e endpoint.",
+      "dicas_de_uso": "Use --db-instance -identifier  para consultar uma instância específica."
+    },
+    {
+      "nome": "aws cloudwatch get -metric -data",
+      "categoria": "Monitoramento",
+      "definicao": "Recupera dados de métricas do Amazon CloudWatch.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Recupera dados de métricas como utilização de CPU, memória e disco para monitoramento e análise.",
+      "dicas_de_uso": "Combine com filtros e períodos específicos para obter dados mais precisos."
+    },
+    {
+      "nome": "aws cloudformation deploy",
+      "categoria": "Infraestrutura como código",
+      "definicao": "Implanta ou atualiza recursos definidos em um template do AWS",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Implanta recursos de infraestrutura definidos no template do CloudFormation.",
+      "dicas_de_uso": "Ideal para automatizar a criação e gerenciamento de recursos de infraestrutura. 🔷 Azure CLI"
+    },
+    {
+      "nome": "az login",
+      "categoria": "Autenticação",
+      "definicao": "Faz login na sua conta Azure.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Abre uma URL no navegador para você autorizar o acesso do terminal.",
+      "dicas_de_uso": "Use --use-device-code  se estiver em ambientes sem GUI."
+    },
+    {
+      "nome": "az group create",
+      "categoria": "Organização",
+      "definicao": "Cria um novo grupo de recursos no Azure.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Grupos são contêineres lógicos para gerenciar recursos relacionados.",
+      "dicas_de_uso": "Sempre crie grupos antes de provisionar VMs, bancos etc."
+    },
+    {
+      "nome": "az vm start",
+      "categoria": "Computação",
+      "definicao": "Inicia uma máquina virtual (VM).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Liga a VM do Azure especificada.",
+      "dicas_de_uso": "Combine com az vm stop  ou az vm deallocate  para economia de custo."
+    },
+    {
+      "nome": "az storage blob upload",
+      "categoria": "Armazenamento",
+      "definicao": "Faz upload de arquivos para o Azure Blob Storage.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Semelhante ao aws s3 cp , usado para armazenar arquivos na nuvem Azure.",
+      "dicas_de_uso": "Use --overwrite true  para substituir arquivos automaticamente."
+    },
+    {
+      "nome": "az group delete",
+      "categoria": "Organização",
+      "definicao": "Deleta um grupo de recursos no Azure.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Exclui um grupo de recursos e todos os recursos dentro dele.",
+      "dicas_de_uso": "Tenha cuidado, pois essa ação não pode ser desfeita."
+    },
+    {
+      "nome": "az vm deallocate",
+      "categoria": "Computação",
+      "definicao": "Desaloca uma máquina virtual (VM) no Azure.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Desaloca a VM, liberando recursos de computação sem apagar os dados.",
+      "dicas_de_uso": "Ideal para reduzir custos quando a VM não estiver em uso, mas você quer manter a configuração."
+    },
+    {
+      "nome": "az vm resize",
+      "categoria": "Computação",
+      "definicao": "Altera o tamanho de uma máquina virtual no Azure.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Redimensiona uma VM para um tamanho diferente, adequado às necessidades de processamento.",
+      "dicas_de_uso": "Use para ajustar a capacidade da VM conforme a demanda de recursos."
+    },
+    {
+      "nome": "az aks create",
+      "categoria": "Contêineres",
+      "definicao": "Cria um cluster do Azure Kubernetes Service (AKS).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria um cluster Kubernetes no Azure com o número de nós especificado.",
+      "dicas_de_uso": "Inclua o --enable-addons monitoring  para ativar o monitoramento do AKS."
+    },
+    {
+      "nome": "az storage account create",
+      "categoria": "Armazenamento",
+      "definicao": "Cria uma nova conta de armazenamento no Azure.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria uma conta de armazenamento no Azure, onde você pode armazenar blobs, arquivos, tabelas, etc.",
+      "dicas_de_uso": "Escolha o sku  de acordo com suas necessidades de redundância e desempenho."
+    },
+    {
+      "nome": "az storage blob download",
+      "categoria": "Armazenamento",
+      "definicao": "Faz download de arquivos de um container do Azure Blob Storage.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Baixa arquivos do Blob Storage para seu computador local.",
+      "dicas_de_uso": "Ideal para automação de backups e download de arquivos grandes."
+    },
+    {
+      "nome": "az appservice plan create",
+      "categoria": "Aplicações Web",
+      "definicao": "Cria um plano de App Service no Azure.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria um plano de hospedagem no Azure App Service para suas aplicações web.",
+      "dicas_de_uso": "Use o parâmetro --is-linux  se for implantar aplicações Linux."
+    },
+    {
+      "nome": "az ad user create",
+      "categoria": "Gerenciamento de identidade",
+      "definicao": "Cria um novo usuário no Azure Active Directory (AD).",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Cria um novo  usuário no Azure AD, que pode ser usado para acessar recursos do Azure.",
+      "dicas_de_uso": "Após a criação do usuário, você pode atribuir permissões e grupos a ele. 🤖 IA — Conceitos, Comandos e Integrações Básicas"
+    },
+    {
+      "nome": "Machine Learning / Deep Learning",
+      "categoria": "IA / Modelos Preditivos",
+      "definicao": "Machine Learning é o campo que permite que computadores aprendam",
+      "explicacao_pratica": " É o que permite prever churn de clientes, reconhecer imagens, classificar e -mails como spam, entre outros. Linguagens e bibliotecas: • Python (Scikit -learn, TensorFlow, PyTorch) • Jupyter Notebooks Exemplo de ML com Scikit -learn: Exemplo de rede neural com TensorFlow:"
+    },
+    {
+      "nome": "Análise de Dados (Data Analytics)",
+      "categoria": "Estatística / Business Intelligence",
+      "definicao": "Exploração de dados para descobrir padrões, tendências e obter",
+      "explicacao_pratica": " Inclui limpeza de dados, agregações, geração de relatórios, KPIs. Ferramentas:  Pandas (Python), Excel, SQL, Power BI Exemplo com Pandas:"
+    },
+    {
+      "nome": "Engenharia de Dados",
+      "categoria": "Infraestrutura / Pipelines de Dados",
+      "definicao": "Área responsável por construir e manter os sistemas e pipelines que",
+      "explicacao_pratica": " É quem garante que os dados cheguem limpos e no formato certo para cientistas de dados e sistemas analíticos. Ferramentas:  Apache Airflow, Spark, Kafka, ETL, AWS Glue, dbt Exemplo com Airflow (DAG básica em Python):"
+    },
+    {
+      "nome": "Visualização de Dados (Power BI, Tableau)",
+      "categoria": "Comunicação / BI",
+      "definicao": "Representação gráfica dos dados para facilitar a interpretação e",
+      "explicacao_pratica": " Gráficos, dashboards e painéis que mostram indicadores, comparações, alertas visuais. Ferramentas:  Power BI, Tableau, Google Data Studio, Plotly, Matplotlib Exemplo com Matplotlib (Python):"
+    },
+    {
+      "nome": "API da OpenAI (ChatGPT, Codex, etc.)",
+      "categoria": "API / Integração",
+      "definicao": "Interface que permite integrar modelos de linguagem (como o ChatGPT)",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Você envia mensagens em JSON e recebe a resposta da IA, como se fosse uma conversa.",
+      "dicas_de_uso": "Controle o tom, temperatura (criatividade) e tokens máximos no payload."
+    },
+    {
+      "nome": "Hugging Face Transformers",
+      "categoria": "Biblioteca Python / NLP",
+      "definicao": "Biblioteca com milhares de modelos de linguagem pré -treinados.",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Em poucas linhas você consegue gerar texto, traduzir, responder perguntas e mais.",
+      "dicas_de_uso": "Use pipeline()  para tarefas prontas ou carregue modelos específicos."
+    },
+    {
+      "nome": "Fine -tuning (Ajuste Fino de Modelos)",
+      "categoria": "IA / Treinamento",
+      "definicao": "Treinamento adicional feito em cima de um modelo base, com seus",
+      "explicacao_pratica": " Você pode ensinar o modelo a responder com a linguagem e contexto do seu negócio.",
+      "dicas_de_uso": "Exige dados bem preparados e bons prompts de avaliação."
+    },
+    {
+      "nome": "Prompt Engineering",
+      "categoria": "Engenharia de Prompt",
+      "definicao": "Técnica de escrever comandos (prompts) otimizados para extrair",
+      "explicacao_pratica": " Não basta perguntar — tem que estruturar a pergunta bem!",
+      "dicas_de_uso": "Use contexto, role (função), exemplos, limitações e linguagem clara."
+    },
+    {
+      "nome": "LangChain",
+      "categoria": "Framework",
+      "definicao": "Framework Python (ou JS) para construir apps com LLMs, com",
+      "comando_exemplo": "",
+      "explicacao_pratica": " Permite conectar IA com fontes externas, memória de contexto, lógica condicional e muito mais.",
+      "dicas_de_uso": "Ideal para chatbots avançados, assistentes e automações IA complexas."
+    },
+    {
+      "nome": "RAG (Retrieval -Augmented Generation)",
+      "categoria": "Arquitetura IA",
+      "definicao": "Técnica que combina IA com mecanismos de busca em bases externas",
+      "explicacao_pratica": " A IA “busca” a resposta em documentos ou bancos de dados antes de responder, com mais precisão.",
+      "dicas_de_uso": "Muito usada em sistemas internos empresariais que usam base de dados própria."
+    },
+    {
+      "nome": "LLM (Large Language Model)",
+      "categoria": "Modelos de Linguagem",
+      "definicao": "Modelos treinados com grandes volumes de texto para entender e gerar",
+      "explicacao_pratica": " Modelos como o GPT, LLaMA ou Claude que respondem perguntas, geram texto e executam tarefas complexas de linguagem.",
+      "dicas_de_uso": "Avalie tamanho do modelo vs custo vs latência; use quantized models para rodar localmente."
+    },
+    {
+      "nome": "Vector Database (Base Vetorial)",
+      "categoria": "Armazenamento / Busca Semântica",
+      "definicao": "Banco de dados especializado para armazenar vetores de embeddings",
+      "explicacao_pratica": " Usado em sistemas com IA para buscar documentos semelhantes a partir de uma pergunta. Ideal em soluções RAG.",
+      "dicas_de_uso": " Use com embeddings de texto (OpenAI, Sentence -BERT). Ferramentas populares:  Pinecone, Weaviate, ChromaDB, FAISS"
+    },
+    {
+      "nome": "Embeddings",
+      "categoria": "Representação Semântica",
+      "definicao": "Vetores numéricos que representam palavras, frases ou documentos",
+      "explicacao_pratica": " Permitem IA \"entender\" relações de significado entre palavras e documentos.",
+      "dicas_de_uso": " Use OpenAI ( text-embedding -3-small ) ou sentence -transformers  do Hugging Face para gerar embeddings. Exemplo:"
+    },
+    {
+      "nome": "Tokenização",
+      "categoria": "Pré-processamento de Texto",
+      "definicao": "Processo de dividir texto em partes menores chamadas tokens",
+      "explicacao_pratica": " É essencial para entrada de texto em modelos de linguagem como o GPT ou BERT.",
+      "dicas_de_uso": " Use tokenizers da Hugging Face para lidar com diferentes modelos."
+    },
+    {
+      "nome": "Zero -shot / Few -shot Learning",
+      "categoria": "Estratégias de uso de LLMs",
+      "definicao": "Zero -shot: o modelo resolve uma tarefa sem exemplos. Few -shot:",
+      "explicacao_pratica": " Permite aplicar modelos pré -treinados a novas tarefas com pouco (ou nenhum) dado adicional.",
+      "dicas_de_uso": " Exemplos em prompt ajudam o modelo a entender o padrão da tarefa."
+    },
+    {
+      "nome": "Chain of Thought (CoT)",
+      "categoria": "Prompt Engineering Avançado",
+      "definicao": "Técnica onde o modelo é induzido a \"pensar passo a passo\" ao resolver",
+      "explicacao_pratica": " Ao guiar a IA para explicar o raciocínio, ela tende a acertar mais.",
+      "dicas_de_uso": " Adicione \"Let's think step by step\" no final do prompt."
+    },
+    {
+      "nome": "Guardrails",
+      "categoria": "Segurança e Controle de IA",
+      "definicao": "Regras e mecanismos que limitam ou controlam as saídas de modelos",
+      "explicacao_pratica": " Podem bloquear conteúdo inadequado ou garantir que respostas sigam um formato.",
+      "dicas_de_uso": " Ferramentas como Guardrails.ai  ou regex no pós -processamento ajudam a implementar."
+    },
+    {
+      "nome": "Modelos Quantizados",
+      "categoria": "Otimização de Modelos",
+      "definicao": "Versões comprimidas de modelos que usam menos bits por parâmetro",
+      "explicacao_pratica": " Muito usados em LLMs locais (como LLaMA) para rodar em CPUs comuns.",
+      "dicas_de_uso": " Use com GGUF , GPTQ , bitsandbytes . Compatível com transformers  e llama.cpp ."
+    },
+    {
+      "nome": "LLMs Open -Source",
+      "categoria": "Modelos de Linguagem",
+      "definicao": "Modelos de linguagem de código aberto que podem ser usados",
+      "explicacao_pratica": " Exemplos incluem LLaMA, Mistral, Falcon, Phi -2 e Gemma.",
+      "dicas_de_uso": " Combine com LangChain ou Ollama para criar soluções privadas."
+    },
+    {
+      "nome": "Vetor Semântico (Embedding)",
+      "categoria": "Representação de dados",
+      "definicao": "Vetores numéricos que representam significado de palavras, frases ou",
+      "explicacao_pratica": " Permitem que IAs “entendam” semelhanças entre textos; textos com significados próximos terão vetores próximos.",
+      "dicas_de_uso": " Use OpenAI Embeddings , SentenceTransformers , ou Hugging Face  para gerar vetores. Ideal para buscas semânticas."
+    },
+    {
+      "nome": "Tokenização",
+      "categoria": "Pré-processamento",
+      "definicao": "Processo de dividir texto em unidades menores chamadas tokens.",
+      "explicacao_pratica": " Tokens podem ser palavras, partes de palavras ou até caracteres — depende do modelo.",
+      "dicas_de_uso": " Modelos como GPT usam Byte Pair Encoding (BPE); limite de tokens afeta custo e resposta."
+    },
+    {
+      "nome": "Few -shot / One -shot / Zero -shot",
+      "categoria": "Técnicas de Prompt",
+      "definicao": "Estratégias que variam a quantidade de exemplos dados ao modelo",
+      "explicacao_pratica": " Zero -shot: só descreve a tarefa. Few -shot: fornece alguns exemplos. One -shot: apenas um exemplo.",
+      "dicas_de_uso": " Use few -shot para melhorar precisão em tarefas complexas."
+    },
+    {
+      "nome": "Quantização",
+      "categoria": "Processamento de Voz",
+      "definicao": "Conversão de fala em texto usando modelos de IA.",
+      "explicacao_pratica": " Transforma áudio de reuniões, comandos de voz ou entrevistas em texto para análise ou transcrição. Ferramentas:  OpenAI Whisper, Google Speech API, Azure Speech, DeepSpeech.",
+      "dicas_de_uso": " Use para rodar LLMs localmente ou em edge (como LLaMA.cpp, GGUF).  📌 Nome: Speech -to-Text (Reconhecimento de Voz)"
+    },
+    {
+      "nome": "Text -to-Speech (Síntese de Voz)",
+      "categoria": "Geração de Voz",
+      "definicao": "Conversão de texto em fala artificial.",
+      "explicacao_pratica": " Usado em assistentes virtuais, leitores de tela, robôs e chatbots com voz. Ferramentas:  ElevenLabs, Amazon Polly, Microsoft TTS, Google Cloud TTS."
+    },
+    {
+      "nome": "Visão Computacional",
+      "categoria": "IA / Imagens",
+      "definicao": "Subcampo da IA focado em interpretar e entender imagens ou vídeos.",
+      "explicacao_pratica": " Identificação de rostos, objetos, OCR, classificação de imagens, análise de vídeo. Ferramentas:  OpenCV, YOLO, Detectron2, Segment Anything (Meta), CLIP."
+    }
+  ],
+  "Desenvolvimento de Software — Práticas e": [
+    {
+      "nome": "Orquestração de Agentes",
+      "categoria": "IA Multiagente",
+      "definicao": "Coordenação de múltiplos agentes de IA com papéis distintos para",
+      "explicacao_pratica": " Um agente coleta dados, outro processa, outro valida. Trabalham juntos com memória e objetivos. Frameworks:  CrewAI, LangGraph, AutoGen, MetaGPT, AutogenStudio. Ferramentas"
+    },
+    {
+      "nome": "Metodologia Ágil",
+      "categoria": "Metodologia",
+      "definicao": "Conjunto de práticas para desenvolvimento flexível e iterativo, com",
+      "explicacao_pratica": " Divide o trabalho em sprints curtos, geralmente de 1 a 4 semanas, para manter o foco e a flexibilidade.",
+      "dicas_de_uso": "Frameworks como Scrum e Kanban são os mais comuns para implementar práticas ágeis."
+    },
+    {
+      "nome": "Scrum",
+      "categoria": "Metodologia Ágil",
+      "definicao": "Framework de desenvolvimento ágil focado em ciclos curtos e",
+      "explicacao_pratica": " Dividido em papéis como Scrum Master, Product Owner e Time de Desenvolvimento. Os ciclos são chamados de sprints, e ao final de cada sprint, ocorre uma revisão.",
+      "dicas_de_uso": "A retrospectiva ao final de cada sprint ajuda a melhorar o processo continuamente."
+    },
+    {
+      "nome": "TDD (Test Driven Development)",
+      "categoria": "Prática de Desenvolvimento",
+      "definicao": "Prática onde os testes são escritos antes do código de produção.",
+      "explicacao_pratica": " Ajuda a garantir que o código atenda aos requisitos e funcione corretamente desde o início.     Dicas de uso:  Comece com testes pequenos e objetivos, e refatore o código à medida que os testes passam."
+    },
+    {
+      "nome": "Pair Programming",
+      "categoria": "Técnica de Desenvolvimento",
+      "definicao": "Técnica onde dois desenvolvedores trabalham no mesmo código ao",
+      "explicacao_pratica": " Promove o compartilhamento de conhecimento e a detecção precoce de erros.",
+      "dicas_de_uso": "Um desenvolvedor é o \"driver\" (que escreve o código), enquanto o outro é o \"navigator\" (que revisa e sugere melhorias)."
+    },
+    {
+      "nome": "GitFlow",
+      "categoria": "Fluxo de Trabalho Git",
+      "definicao": "Estratégia de ramificação (branching) usada no Git para estruturar o",
+      "explicacao_pratica": " Usa branches como feature/ , develop , release/  e hotfix/  para gerenciar as diferentes etapas do desenvolvimento de software.",
+      "dicas_de_uso": "É importante fazer merge das branches corretamente para evitar conflitos."
+    },
+    {
+      "nome": "Refatoração de Código",
+      "categoria": "Cultura / Automação",
+      "definicao": "Integra práticas de desenvolvimento e operações para automação,",
+      "explicacao_pratica": " Inclui CI/CD, versionamento de infra, containers, monitoramento, e práticas ágeis. Ferramentas DevOps populares:  GitHub Actions, GitLab CI, Jenkins, Docker, Kubernetes, Terraform Exemplo de workflow GitHub Actions (.yml): Exemplo de CI com GitLab CI (.gitlab -ci.yml):",
+      "dicas_de_uso": "Use ferramentas como linters e code formatters para ajudar na refatoração.  📌 Nome: DevOps (Integração Contínua, Entrega Contínua, Automação) entrega ágil e confiável de software."
+    },
+    {
+      "nome": "Code Review",
+      "categoria": "Qualidade de Código",
+      "definicao": "Processo onde o código escrito por um desenvolvedor é revisado por",
+      "explicacao_pratica": " Além de corrigir erros, as revisões de código ajudam a melhorar a lógica, aumentar a eficiência e compartilhar conhecimento entre os membros da equipe.",
+      "dicas_de_uso": "Crie um checklist de boas práticas e seja construtivo nas críticas."
+    },
+    {
+      "nome": "Kanban",
+      "categoria": "Metodologia Ágil",
+      "definicao": "Técnica visual de gerenciamento de tarefas, com cartões que",
+      "explicacao_pratica": " Usado para visualizar o fluxo de trabalho, priorizar e gerenciar o progresso de tarefas.",
+      "dicas_de_uso": "Ideal para equipes pequenas que precisam de flexibilidade e organização simples."
+    },
+    {
+      "nome": "SOLID",
+      "categoria": "Web / Interface",
+      "definicao": "Criação da interface visual de sites e aplicações, com HTML, CSS e",
+      "explicacao_pratica": " Tudo que o usuário vê e interage — botões, menus, animações, responsividade. Ferramentas populares:  React, Angular, Vue.js, Tailwind CSS, Bootstrap Comandos úteis:",
+      "dicas_de_uso": "Seguir esses princípios ajuda a construir sistemas escaláveis e de fácil manutenção.  📌 Nome: Desenvolvimento Web (Frontend) JavaScript."
+    },
+    {
+      "nome": "Desenvolvimento Web (Backend)",
+      "categoria": "Web / Lógica de Negócio",
+      "definicao": "Criação do lado servidor das aplicações — regras de negócio, banco de",
+      "explicacao_pratica": " É onde “tudo acontece” por trás da interface. O frontend pede, o backend responde. Tecnologias comuns:  Node.js, Django, Flask, Laravel, Spring Boot Comandos úteis:"
+    },
+    {
+      "nome": "Desenvolvimento Web (Full Stack)",
+      "categoria": "Web / Completo",
+      "definicao": "Atua tanto no frontend quanto no backend de aplicações web.",
+      "explicacao_pratica": " O profissional full stack pode criar a interface do usuário e também programar a lógica do servidor e banco de dados. Stack popular:  MERN (MongoDB, Express, React, Node.js)"
+    },
+    {
+      "nome": "Desenvolvimento Mobile (iOS, Android)",
+      "categoria": "Mobile / Aplicativos",
+      "definicao": "Desenvolvimento de aplicativos para dispositivos móveis, nativamente",
+      "explicacao_pratica": " Criação de apps que podem acessar câmera, GPS, notificações e rodar offline. Ferramentas: • Flutter (Dart) • React Native (JavaScript) • Android Studio / Xcode Comandos úteis:"
+    },
+    {
+      "nome": "Desenvolvimento de Sistemas/Desktop",
+      "categoria": "Aplicações Desktop",
+      "definicao": "Criação de softwares para computadores, rodando localmente, sem",
+      "explicacao_pratica": " Programas como editores de texto, ferramentas de design, ERPs, etc. Linguagens comuns:  C#, Java, Python (Tkinter, PyQt), Electron Exemplo de Electron (JavaScript):"
+    },
+    {
+      "nome": "Clean Code",
+      "categoria": "Boas Práticas",
+      "definicao": "Conjunto de princípios e técnicas para escrever código legível,",
+      "explicacao_pratica": " Envolve nomes claros, funções pequenas, código sem duplicação e responsabilidades bem definidas.",
+      "dicas_de_uso": "Use linters, siga guias de estilo e pratique refatorações frequentes."
+    },
+    {
+      "nome": "Design Patterns",
+      "categoria": "Arquitetura de Software",
+      "definicao": "Soluções reutilizáveis para problemas comuns de design de software.",
+      "explicacao_pratica": " Padrões como Singleton, Factory, Observer e Strategy ajudam a resolver problemas recorrentes de forma estruturada.",
+      "dicas_de_uso": "Estude os padrões do livro Design Patterns  da Gang of Four e aplique conforme o contexto do projeto."
+    },
+    {
+      "nome": "DDD (Domain -Driven Design)",
+      "categoria": "Arquitetura / Modelagem",
+      "definicao": "Abordagem de design centrada no domínio do problema e na",
+      "explicacao_pratica": " Modela o software de forma a refletir fielmente os processos e regras do domínio, dividindo -o em bounded contexts .",
+      "dicas_de_uso": "Use agregados, entidades e value objects para representar o domínio com clareza."
+    },
+    {
+      "nome": "Arquitetura em Camadas",
+      "categoria": "Arquitetura de Software",
+      "definicao": "Modelo de organização do código em camadas com responsabilidades bem definidas (ex: apresentação, negócio, persistência).",
+      "explicacao_pratica": " Facilita manutenção e testes, isolando a lógica em blocos distintos.",
+      "dicas_de_uso": "Evite dependências cruzadas entre camadas e utilize interfaces para acoplamento flexível. 🖧 Infraestrutura de TI — Fundamentos e Comandos"
+    },
+    {
+      "nome": "Administração de Redes",
+      "categoria": "Redes / Infraestrutura",
+      "definicao": "Planejamento, configuração e monitoramento da comunicação entre",
+      "explicacao_pratica": " Inclui endereçamento IP, sub -redes, configuração de roteadores/switches, monitoramento de tráfego e segurança de rede.",
+      "dicas_de_uso": "Ferramentas úteis incluem ping , tracert , netstat , nmap  e Wireshark . Comandos úteis:"
+    },
+    {
+      "nome": "Administração de Servidores (Linux)",
+      "categoria": "Servidores / Sistemas Operacionais",
+      "definicao": "Gerenciamento de serviços, usuários, permissões, rede e segurança",
+      "explicacao_pratica": " Envolve manter servidores web, bancos de dados, SSH, firewalls, backups e logs operando corretamente.",
+      "dicas_de_uso": "Sempre monitore logs com journalctl , dmesg  ou tail -f. Comandos úteis:"
+    },
+    {
+      "nome": "Administração de Servidores (Windows",
+      "categoria": "Servidores / Sistemas Operacionais",
+      "definicao": "Gerenciar domínios, usuários, permissões e políticas usando",
+      "explicacao_pratica": " Muito usado em redes corporativas para controle de acesso, impressoras, login único e segurança.",
+      "dicas_de_uso": "Use o PowerShell para automação e administração remota. Comando PowerShell exemplo:"
+    },
+    {
+      "nome": "Virtualização",
+      "categoria": "Infraestrutura / Servidores",
+      "definicao": "Criação de ambientes virtuais (VMs) dentro de um servidor físico, com",
+      "explicacao_pratica": " Permite rodar múltiplos sistemas operacionais isoladamente no mesmo hardware.",
+      "dicas_de_uso": "Ideal para testes, ambientes de desenvolvimento ou otimização de recursos."
+    },
+    {
+      "nome": "Computação em Nuvem (Cloud Computing)",
+      "categoria": "Nuvem / Infraestrutura",
+      "definicao": "Uso de servidores e serviços hospedados remotamente por provedores",
+      "explicacao_pratica": " Permite escalar sistemas, pagar sob demanda, usar armazenamento em cloud, banco de dados gerenciado, serviços de ML, etc.",
+      "dicas_de_uso": "Use sempre boas práticas de segurança como IAM, grupos de segurança e backups automáticos. Exemplos de comandos AWS CLI: Exemplos de comandos Azure CLI:"
+    },
+    {
+      "nome": "Suporte Técnico e Help Desk",
+      "categoria": "Atendimento / Infraestrutura",
+      "definicao": "Atendimento ao usuário para resolver problemas com hardware,",
+      "explicacao_pratica": " O suporte de 1º e 2º nível cuida de desbloqueios, troca de senha, formatação de máquina, instalação de impressora, entre outros.",
+      "dicas_de_uso": " • Tenha um checklist para atendimento • Documente tickets (Ex: GLPI, OTRS, Freshdesk) • Automatize tarefas repetitivas com scripts Exemplo de script básico (Windows .bat):"
+    },
+    {
+      "nome": "Firewall",
+      "categoria": "Segurança / Redes",
+      "definicao": "Sistema que monitora e controla o tráfego de entrada e saída em uma",
+      "explicacao_pratica": " Pode ser um software (iptables, ufw, firewalld) ou hardware. Filtra portas, protocolos e IPs para proteger servidores e redes.",
+      "dicas_de_uso": " Configure regras de entrada e saída, e teste com ferramentas como nmap . Comandos úteis (Linux):"
+    },
+    {
+      "nome": "DNS (Domain Name System)",
+      "categoria": "Redes / Serviços",
+      "definicao": "Sistema responsável por traduzir nomes de domínio (ex: google.com)",
+      "explicacao_pratica": " Quando você acessa um site, o DNS encontra o IP correspondente. Pode ser interno (Active Directory) ou externo (Google, Cloudflare).",
+      "dicas_de_uso": " Ferramentas como nslookup , dig  e host  ajudam a diagnosticar problemas. Comandos úteis:"
+    },
+    {
+      "nome": "Monitoramento de Infraestrutura (Zabbix, Nagios,",
+      "categoria": "Monitoramento / Servidores",
+      "definicao": "Prática de acompanhar o desempenho e a disponibilidade de",
+      "explicacao_pratica": " Ajuda a detectar falhas rapidamente com alertas e dashboards.",
+      "dicas_de_uso": " Configure thresholds (limiares) de CPU, memória, disco e serviços críticos. Ferramentas comuns: Zabbix, Nagios, Prometheus + Grafana"
+    },
+    {
+      "nome": "Backup e Recuperação",
+      "categoria": "Segurança / Continuidade",
+      "definicao": "Processo de copiar e restaurar dados para evitar perda em caso de",
+      "explicacao_pratica": " Pode ser local, em nuvem ou híbrido. Automatize e teste regularmente.",
+      "dicas_de_uso": " Use estratégias como incremental, diferencial e full backup. Ferramentas: rsync, Veeam, Bacula, AWS Backup, scripts .sh"
+    },
+    {
+      "nome": "IAM (Identity and Access Management)",
+      "categoria": "Segurança / Nuvem",
+      "definicao": "Controle de identidades e permissões de acesso a",
+      "explicacao_pratica": " Garante que cada usuário tenha acesso apenas ao necessário (princípio do menor privilégio).",
+      "dicas_de_uso": " Crie grupos, políticas e use autenticação multifator (MFA). Exemplo AWS CLI:"
+    },
+    {
+      "nome": "DHCP (Dynamic Host Configuration Protocol)",
+      "categoria": "Redes",
+      "definicao": "Protocolo que atribui automaticamente endereços IP e configurações",
+      "explicacao_pratica": " Evita configuração manual de IPs, ideal para redes dinâmicas.",
+      "dicas_de_uso": " Verifique conflitos e defina reservas para dispositivos fixos (ex: impressoras). Ver IP obtido via DHCP:"
+    },
+    {
+      "nome": "RAID (Redundant Array of Independent Disks)",
+      "categoria": "Armazenamento / Desempenho",
+      "definicao": "Técnica que combina múltiplos discos para melhorar desempenho,",
+      "explicacao_pratica": " RAID 0 (velocidade), RAID 1 (espelhamento), RAID 5/6/10 (segurança e performance).",
+      "dicas_de_uso": " Monitore discos com mdadm , smartctl , megacli . Exemplo Linux:"
+    },
+    {
+      "nome": "Script de Automação (Shell, PowerShell)",
+      "categoria": "Produtividade / Administração",
+      "definicao": "Código executável que automatiza tarefas repetitivas em sistemas",
+      "explicacao_pratica": " Instalações, backups, configurações, relatórios — tudo com um clique.",
+      "dicas_de_uso": " Comente seu script e valide antes de rodar em produção. Exemplo (bash):"
+    },
+    {
+      "nome": "Protocolo SNMP (Simple  Network Management Protocol)",
+      "categoria": "Monitoramento / Redes",
+      "definicao": "Protocolo para coleta e organização de informações de dispositivos de",
+      "explicacao_pratica": " Permite que ferramentas como Zabbix e PRTG monitorem equipamentos em tempo real.",
+      "dicas_de_uso": " Configure a comunidade SNMP com segurança (ex: readonly ). Comandos úteis:"
+    },
+    {
+      "nome": "Logs de Sistema",
+      "categoria": "Diagnóstico / Segurança",
+      "definicao": "Registros automáticos de eventos do sistema, aplicações e segurança.",
+      "explicacao_pratica": " Usados para troubleshooting, auditoria e compliance.",
+      "dicas_de_uso": " Analise logs frequentemente e automatize alertas com ferramentas como Logwatch ou ELK Stack. Comandos úteis (Linux): 🔐 Segurança da Informação — Fundamentos e Práticas"
+    },
+    {
+      "nome": "Análise e Gerenciamento de Riscos",
+      "categoria": "Gestão / Segurança",
+      "definicao": "Processo de identificar, avaliar e tratar riscos que afetam a",
+      "explicacao_pratica": " Inclui mapeamento de ativos, avaliação de impacto, cálculo de probabilidade e definição de planos de resposta (ex: mitigação, aceitação). Ferramentas comuns:  Risk Matrix, OCTAVE, ISO 27005, Planilhas de risco Exemplo básico de matriz de risco: • Impacto x Probabilidade (de baixo a alto) • Ex: Vazamento de dados = Alto impacto + Média probabilidade = Risco crítico"
+    },
+    {
+      "nome": "Pentest (Testes de Invasão)",
+      "categoria": "Segurança Ofensiva",
+      "definicao": "Teste controlado para encontrar vulnerabilidades em sistemas antes",
+      "explicacao_pratica": " Simula ataques reais para testar segurança de APIs, sites, redes e dispositivos. Ferramentas populares: • Nmap (scan de portas) • Burp Suite (testes web) • Metasploit (exploração) • SQLmap (injeção SQL) Comandos úteis:"
+    },
+    {
+      "nome": "Segurança Ofensiva",
+      "categoria": "Ataque Ético / Teste",
+      "definicao": "Conjunto de práticas de ataque (ético) usadas para identificar falhas e",
+      "explicacao_pratica": " Profissionais certificados (como CEH, OSCP) utilizam técnicas ofensivas para aumentar a proteção real. Ferramentas:  Kali Linux, Cobalt Strike, Empire"
+    },
+    {
+      "nome": "Segurança Defensiva",
+      "categoria": "Proteção / Monitoramento",
+      "definicao": "Conjunto de práticas e tecnologias para evitar, detectar e responder a",
+      "explicacao_pratica": " Inclui uso de firewalls, antivírus, EDR, SIEM, segmentação de rede, backups, honeypots e hardening. Ferramentas defensivas:  Suricata, Snort, Wazuh, CrowdStrike, Splunk Comando exemplo de firewall no Linux:"
+    },
+    {
+      "nome": "Governança e Compliance (LGPD, ISO",
+      "categoria": "Conformidade / Gestão",
+      "definicao": "Conjunto de políticas, normas e controles para garantir que a",
+      "explicacao_pratica": " • LGPD (Brasil):  Regula o uso de dados pessoais. • ISO 27001:  Norma internacional de SGSI (Sistema de Gestão da Segurança da Informação). • PCI -DSS:  Segurança para dados de cartão. Dicas práticas: • Mapeie todos os dados sensíveis tratados pela empresa • Tenha políticas documentadas (backup, acesso, senhas) • Realize auditorias periódicas"
+    },
+    {
+      "nome": "Engenharia Social",
+      "categoria": "Ameaças / Segurança",
+      "definicao": "Técnica de manipulação psicológica para enganar pessoas e obter",
+      "explicacao_pratica": " O atacante se passa por alguém confiável e induz a vítima a revelar informações sensíveis, como senhas ou códigos de acesso. Exemplos comuns:  Phishing, pretexting, baiting. Dicas:  Realize treinamentos de conscientização com usuários finais e use MFA para reduzir o risco."
+    },
+    {
+      "nome": "Phishing",
+      "categoria": "Ameaças / Segurança",
+      "definicao": "Técnica de fraude digital que usa e -mails, mensagens ou sites falsos",
+      "explicacao_pratica": " Um e -mail que simula ser do banco pede para o usuário clicar em um link e inserir senha e dados pessoais. Dicas de prevenção: Verifique o domínio do remetente, evite clicar em links suspeitos e use soluções de segurança com filtros anti -phishing."
+    },
+    {
+      "nome": "Hardening",
+      "categoria": "Controle de Acesso",
+      "definicao": "Método de autenticação que exige mais de um fator para validar a",
+      "explicacao_pratica": " Combina algo que o usuário sabe (senha), tem (token/app) e/ou é (biometria). Exemplos:  Google Authenticator, YubiKey, SMS com código. Dica:  Sempre que possível, habilite MFA para contas críticas (e -mail, sistemas internos, VPN).",
+      "dicas_de_uso": "Utilize benchmarks como o CIS (Center for Internet Security) como referência de configuração segura.  📌 Nome: MFA (Autenticação Multifator) identidade do usuário."
+    },
+    {
+      "nome": "SIEM (Security Information and Event Management)",
+      "categoria": "Monitoramento / Resposta",
+      "definicao": "Sistema que centraliza e correlaciona logs e eventos de segurança para",
+      "explicacao_pratica": " Coleta logs de servidores, firewalls e aplicações e identifica comportamentos suspeitos ou ataques. Ferramentas populares:  Splunk, Wazuh, Graylog, QRadar Dica:  Crie alertas com base em regras de comportamento e integre com playbooks de resposta. 🧩 Gestão de TI — Projetos, Produtos e Governança"
+    },
+    {
+      "nome": "Gerenciamento de Projetos (Scrum, Kanban,",
+      "categoria": "Metodologias Ágeis / Projetos",
+      "definicao": "Planejamento, execução, monitoramento e encerramento de projetos",
+      "explicacao_pratica": " • Scrum:  metodologia ágil com sprints, papéis bem definidos (PO, Scrum Master, Dev Team).  • Kanban:  gestão visual do fluxo de trabalho usando quadros e cartões. • PMBOK:  guia tradicional com áreas de conhecimento e processos (ex: cronograma, riscos, aquisições). Ferramentas populares:  Jira, Trello, Azure DevOps, Notion, MS Project Exemplo básico de quadro Kanban: • Colunas: A Fazer → Em Andamento → Concluído"
+    },
+    {
+      "nome": "Governança de TI (COBIT, ITIL)",
+      "categoria": "Gestão / Conformidade",
+      "definicao": "Conjunto de boas práticas para alinhar TI com os objetivos de negócio,",
+      "explicacao_pratica": " • COBIT:  foca em governança, valor, risco e conformidade. • ITIL:  foca na entrega de serviços de TI com qualidade (incident management, service desk, etc.) Exemplos práticos: • ITIL:  Ticket de incidente é registrado, categorizado e tratado com SLA. • COBIT:  Relatórios de performance da TI são alinhados com o planejamento estratégico da empresa."
+    },
+    {
+      "nome": "Product Owner / Product Manager",
+      "categoria": "Produto / Estratégia",
+      "definicao": "",
+      "explicacao_pratica": " • PO prioriza o backlog e detalha histórias. • PM estuda o mercado, define a visão e coordena lançamentos.    Ferramentas:  Jira, Confluence, Roadmunk, Figma (para wireframes) Exemplo: Um PO define quais funcionalidades vêm primeiro (MVP). Um PM define para quem  o produto é feito, por quê , e com qual valor ."
+    },
+    {
+      "nome": "Gestão de Serviços e Contratos de TI",
+      "categoria": "Operações / Administração",
+      "definicao": "Gerenciamento de entrega de serviços (internos ou terceirizados) com",
+      "explicacao_pratica": " Inclui a formalização de contratos de TI com fornecedores, suporte técnico, sistemas de chamados, e acompanhamento de indicadores. Ferramentas comuns:  GLPI, OTRS, Zabbix, ServiceNow Termos importantes: • SLA (Service Level Agreement):  tempo de resposta garantido. • KPI (Key Performance Indicator):  métrica de qualidade do serviço. Exemplo de relatório de serviço: • Chamados atendidos: 95% dentro do SLA • Disponibilidade da rede: 99,8%"
+    },
+    {
+      "nome": "Planejamento de Capacidade e Demanda",
+      "categoria": "Gestão / Projetos",
+      "definicao": "Processo de selecionar, priorizar e gerenciar um portfólio de projetos",
+      "explicacao_pratica": "A gestão de portfólio visa equilibrar os investimentos e maximizar o retorno dos projetos, garantindo que os projetos de TI entreguem valor à organização. Ferramentas populares:  Jira Portfolio, MS Project, Monday.com Dicas práticas: • Realize uma análise contínua de ROI para cada projeto. • Alinhe os projetos com os objetivos estratégicos de longo prazo da empresa."
+    },
+    {
+      "nome": "Gestão de Riscos de TI",
+      "categoria": "Gestão / Riscos",
+      "definicao": "Identificação, avaliação e mitigação de riscos tecnológicos que podem",
+      "explicacao_pratica": "Inclui a análise de riscos como falhas de segurança, desastres naturais, falhas de hardware, etc., e a implementação de planos de contingência. Ferramentas populares:  RiskWatch, @RISK, Proteus Exemplo de análise de risco: • Risco:  Falha no sistema de backup. • Probabilidade:  Média • Impacto:  Alto • Plano de mitigação:  Verificar backups semanais, realizar testes mensais."
+    },
+    {
+      "nome": "Gestão de Mudanças em TI (ITIL Change Management)",
+      "categoria": "Operações / Governança",
+      "definicao": "Processo de gerenciar e controlar mudanças na infraestrutura de TI de",
+      "explicacao_pratica": "Envolve a implementação de mudanças em sistemas, software ou hardware, com comunicação adequada, avaliação de risco e documentação. Ferramentas populares:  ServiceNow, Cherwell, BMC Remedy Dicas práticas: • Avalie o impacto de cada mudança no serviço. • Mantenha registros de todas as mudanças para auditorias futuras."
+    },
+    {
+      "nome": "Gerenciamento de Custos de TI",
+      "categoria": "Gestão / Finanças",
+      "definicao": "Processo de monitoramento, controle e otimização dos custos",
+      "explicacao_pratica": "A gestão de custos envolve desde a compra de equipamentos até o gerenciamento de licenças e custos de cloud computing. Ferramentas populares:  CloudHealth, Apptio, ServiceNow Dicas práticas: • Monitore os custos de cloud mensalmente. • Avalie contratos com fornecedores para negociar melhores condições."
+    },
+    {
+      "nome": "Gestão de Fornecedores de TI (Vendor Management)",
+      "categoria": "Gestão / Operações",
+      "definicao": "Processo de selecionar, gerenciar e monitorar os fornecedores de TI",
+      "explicacao_pratica": "Inclui a escolha de fornecedores, negociação de contratos, acompanhamento de entregas e avaliação do desempenho. Ferramentas populares:  ServiceNow, SAP Ariba, Oracle Procurement Dicas práticas: • Realize auditorias de desempenho dos fornecedores anualmente. • Mantenha uma boa comunicação para garantir o cumprimento de SLAs."
+    },
+    {
+      "nome": "Gestão de Conhecimento em TI",
+      "categoria": "Gestão / Conhecimento",
+      "definicao": "Processo de identificar, criar, compartilhar e aplicar o conhecimento para melhorar a eficiência operacional e a inovação.",
+      "explicacao_pratica": "Pode incluir documentação de processos, gestão de Wiki e repositórios de conhecimento para garantir que a equipe de TI tenha acesso às melhores práticas. Ferramentas populares:  Confluence, SharePoint, Guru Dicas práticas: • Crie repositórios centralizados para facilitar o acesso ao conhecimento. • Encoraje a colaboração e a documentação contínua entre as equipes."
+    },
+    {
+      "nome": "Governança de Dados e Big Data",
+      "categoria": "Gestão / Dados",
+      "definicao": "Conjunto de práticas e políticas que garantem a gestão eficaz e segura",
+      "explicacao_pratica": "Inclui a definição de padrões de qualidade de dados, políticas de governança e controle de acesso aos dados, além do gerenciamento de grandes volumes de dados (Big Data). Ferramentas populares:  Talend, Informatica, Apache Hadoop Dicas práticas: • Defina um modelo de governança claro e aplique políticas de segurança e privacidade. • Utilize ferramentas de análise de dados para extrair valor de grandes volumes de informações."
+    },
+    {
+      "nome": "Compliance e Regulamentação de TI",
+      "categoria": "Governança / Conformidade",
+      "definicao": "Conjunto de políticas e processos que asseguram que a TI esteja em",
+      "explicacao_pratica": "Envolve garantir que a infraestrutura de TI e os processos de gestão de dados sigam leis como GDPR, LGPD, SOX, entre outras. Ferramentas populares:  OneTrust, ComplyAdvantage, TrustArc Dicas práticas: • Realize auditorias de conformidade regularmente.  • Mantenha registros claros e acessíveis de todas as decisões relacionadas à conformidade. 🎨 UX/UI e Design Digital"
+    },
+    {
+      "nome": "Design de Interfaces (UI)",
+      "categoria": "Frontend / Design Visual",
+      "definicao": "Criação da aparência visual dos sistemas — botões, cores, tipografia,",
+      "explicacao_pratica": " O UI Designer cria telas e componentes visuais que facilitam a interação. Foco em estética, clareza e consistência visual. Ferramentas populares:  Figma, Adobe XD, Sketch, Zeplin Princípios de bom UI: • Hierarquia visual clara • Espaçamento e alinhamento consistente • Cores com contraste adequado • Tipografia legível • Ícones com propósito"
+    },
+    {
+      "nome": "Experiência do Usuário (UX)",
+      "categoria": "Estratégia / Comportamento",
+      "definicao": "Conjunto de práticas que visam criar experiências positivas para o",
+      "explicacao_pratica": " Vai além do visual — engloba fluxo, facilidade de uso, tempo de resposta, acessibilidade, entre outros fatores que afetam a jornada do usuário. Atividades típicas de UX Designer: • Pesquisa com usuários • Mapeamento de jornadas  • Personas • Wireframes e fluxos • Testes de usabilidade Exemplo: Melhorar o formulário de cadastro para que leve 50% menos tempo e cause menos erros."
+    },
+    {
+      "nome": "Prototipagem e Testes de Usabilidade",
+      "categoria": "Validação / Iteração",
+      "definicao": "Técnicas para validar ideias de design antes do desenvolvimento real,",
+      "explicacao_pratica": " Protótipos (de baixa ou alta fidelidade) são mostrados a usuários reais para observar onde há dúvidas, fricções ou erros. Ferramentas populares:  Figma (prototipagem), Maze, InVision, Marvel, Hotjar (gravações e mapas de calor) Exemplo de processo: 1. Criar protótipo navegável no Figma 2. Convidar usuários reais para testarem 3. Coletar feedback → Melhorar fluxo → Testar novamente Benefício:  Evita retrabalho caro no desenvolvimento corrigindo falhas já na fase de design."
+    },
+    {
+      "nome": "Design Responsivo (Responsive Design)",
+      "categoria": "Frontend / Layout",
+      "definicao": "Técnica de design de interfaces que garante que o layout de uma página",
+      "explicacao_pratica": "Utiliza media queries e design fluido para garantir uma experiência de usuário consistente em qualquer dispositivo. Ferramentas populares:  Figma, Sketch, Adobe XD, Bootstrap Dicas práticas:  • Utilize unidades relativas como porcentagens, em, rem, em vez de unidades fixas como px. • Teste em dispositivos reais e em diferentes navegadores para garantir a responsividade."
+    },
+    {
+      "nome": "Design de Interação (IxD)",
+      "categoria": "Frontend / Design Comportamental",
+      "definicao": "Área do design focada em como os usuários interagem com os",
+      "explicacao_pratica": "Inclui a definição de animações, transições e feedbacks visuais, para que o usuário entenda claramente suas ações e o que está acontecendo. Ferramentas populares:  Figma, Principle, Adobe XD Exemplo:  O botão de envio de um formulário pode mudar de cor quando o u suário passa o mouse sobre ele, sinalizando que é interativo."
+    },
+    {
+      "nome": "Acessibilidade (A11y)",
+      "categoria": "Estratégia / Inclusão",
+      "definicao": "Práticas e técnicas de design e desenvolvimento de interfaces que",
+      "explicacao_pratica": "Envolve o uso de cores contrastantes, tamanhos de texto adequados, navegação por teclado, e alternativas de leitura de tela (como o uso de ARIA tags). Ferramentas populares:  WAVE, Axe, Lighthouse, VoiceOver Dicas práticas: • Utilize contrastes adequados entre texto e fundo para facilitar a leitura. • Garanta que o site ou aplicativo seja totalmente navegável usando apenas o teclado."
+    },
+    {
+      "nome": "Arquitetura da Informação (IA)",
+      "categoria": "Estratégia / Estrutura",
+      "definicao": "Organização e estruturação da informação em produtos digitais para"
+    },
+    {
+      "nome": "Wireframe",
+      "categoria": "Design / Prototipagem",
+      "definicao": "Esboço simplificado de uma interface, focando apenas na estrutura e",
+      "explicacao_pratica": "Wireframes são usados para alinhar a equipe de design sobre a posição e hierarquia dos elementos na tela. Ferramentas populares:  Balsamiq, Figma, Sketch, Adobe XD Exemplo de uso:  Criar um wireframe do layout da página inicial de um site para discutir onde colocar os elementos principais (menu, cabeçalho, rodapé, etc.)."
+    },
+    {
+      "nome": "Design de Microinterações",
+      "categoria": "Frontend / Design Comportamental",
+      "definicao": "Pequenos detalhes no design de interfaces que geram feedback",
+      "explicacao_pratica": "São usadas para tornar a experiência de uso mais rica e interativa, ajudando o usuário a entender o que está acontecendo em tempo real. Ferramentas populares:  Principle, After Effects, Figma Exemplo de microinteração:  Quando o usuário clica em um botão, ele \"enche\" com uma cor, indicando  que a ação foi realizada."
+    },
+    {
+      "nome": "Design de Produto (Product Design)",
+      "categoria": "Estratégia / Produto",
+      "definicao": "Processo completo de criação de um produto digital, desde a pesquisa",
+      "explicacao_pratica": "O design de produto engloba desde a definição de requisitos até a implementação e testes, sempre focado na solução das necessidades do usuário e nos objetivos de negócios. Ferramentas populares:  Figma, InVision, Sketch Exemplo:  O design de um app de saúde que passa por várias etapas, como prototipagem, testes de usabilidade, revisão de feedbacks, antes de ser lançado."
+    },
+    {
+      "nome": "Design de Marca (Brand Design)",
+      "categoria": "Estratégia / Identidade Visual",
+      "definicao": "Criação de elementos visuais e diretrizes para representar uma marca",
+      "explicacao_pratica": "Inclui o design de logotipos, paletas de cores, tipografia e outros elementos gráficos que compõem a identidade visual de uma marca. Ferramentas populares:  Adobe Illustrator, Figma, CorelDRAW Exemplo de uso:  Criar uma paleta de cores que seja consistente com os valores da marca e que funcione bem em diferentes plataformas (site, mídias sociais, etc.). ✅ Qualidade de Software — Testes, QA e Boas Práticas"
+    },
+    {
+      "nome": "Testes de Software (QA)",
+      "categoria": "Desenvolvimento Orientado a Testes",
+      "definicao": "Técnica de desenvolvimento onde o código é escrito a partir de testes",
+      "explicacao_pratica": " O ciclo é: 1. Escreva um teste que falha 2. Implemente o código para passar no teste 3. Refatore o código 4. Repita Benefícios: • Código mais confiável • Cobertura de testes mais alta • Menos bugs em produção Exemplo com Jest (JavaScript):"
+    },
+    {
+      "nome": "Testes Automatizados",
+      "categoria": "Automação de Qualidade",
+      "definicao": "Execução automática de scripts de teste que validam funcionalidades e",
+      "explicacao_pratica": " São essenciais para CI/CD, pois garantem qualidade contínua e rápida identificação de problemas. Níveis de testes: • Unitários:  testam funções isoladas • Integração:  testam se módulos funcionam juntos • End -to-End (E2E):  testam fluxos completos, do início ao fim Ferramentas por nível: • Unitário: Jest, JUnit, PyTest • Integração: Mocha, Supertest • E2E: Cypress, Playwright, Selenium"
+    },
+    {
+      "nome": "Cobertura de Testes",
+      "categoria": "Métrica de Qualidade",
+      "definicao": "Percentual do código que está sendo testado por testes",
+      "explicacao_pratica": " Ajuda a identificar partes não testadas do sistema e a priorizar cobertura. Ferramentas:  Istanbul (nyc), SonarQube, Coverage.py Boa prática:  Não focar apenas em quantidade, mas também na qualidade dos testes ."
+    },
+    {
+      "nome": "Testes de Integração",
+      "categoria": "Garantia da Qualidade / Testes",
+      "definicao": "Testes que verificam a interação entre módulos ou componentes do",
+      "explicacao_pratica": "Testes de integração focam em validar se as interfaces entre módulos ou sistemas externos (APIs, bancos de dados) funcionam corretamente. Ferramentas comuns:  Postman (para APIs), JUnit, TestNG, Mocha Exemplo:  Testar a comunicação entre um módulo de pagamento e o sistema bancário externo."
+    },
+    {
+      "nome": "Testes de Regressão",
+      "categoria": "Garantia da Qualidade / Testes",
+      "definicao": "Testes realizados para verificar se novas alterações no código não",
+      "explicacao_pratica": "Após a implementação de novas features ou correção de bugs, os testes de regressão garantem que o sistema ainda funcione corretamente sem introduzir falhas.     Ferramentas comuns:  Selenium, Cypress, JUnit, TestComplete Exemplo:  Após a adição de uma nova funcionalidade, testar se o fluxo de login e cadastro não foi comprometido."
+    },
+    {
+      "nome": "Testes de Performance",
+      "categoria": "Garantia da Qualidade / Testes",
+      "definicao": "Testes focados em medir a velocidade, estabilidade e escalabilidade do",
+      "explicacao_pratica": "Verifica como o sistema se comporta sob condições de alto tráfego, como quantos usuários simultâneos ele pode suportar sem perder desempenho. Ferramentas comuns:  JMeter, LoadRunner, Gatling Exemplo:  Testar uma API para ver quantas requisições por segundo ela consegue processar sem degradação no tempo de resposta."
+    },
+    {
+      "nome": "Testes de Usabilidade",
+      "categoria": "Garantia da Qualidade / Testes",
+      "definicao": "Testes para avaliar a facilidade de uso, eficiência e satisfação do",
+      "explicacao_pratica": "Envolve observação direta de usuários reais interagindo com o produto e coleta de feedback para identificar pontos de melhoria na experiência do usuário. Ferramentas comuns:  Hotjar, Lookback, UsabilityHub Exemplo:  Convidar usuários a realizar uma tarefa específica em um site para identificar pontos de confusão ou dificuldades."
+    },
+    {
+      "nome": "Testes de Aceitação (AT)",
+      "categoria": "Garantia da Qualidade / Testes",
+      "definicao": "Testes que verificam se o software atende aos critérios de aceitação",
+      "explicacao_pratica": "Realizados no final do ciclo de desenvolvimento para garantir que o sistema está conforme os requisitos do cliente. Ferramentas comuns:  Cucumber, Gherkin, FitNesse         Exemplo:  Testar que todas as funcionalidades de um e -commerce funcionam corretamente antes de ser lançado ao público."
+    },
+    {
+      "nome": "QA (Quality Assurance) vs. QC (Quality Control)",
+      "categoria": "Garantia da Qualidade / Definições",
+      "definicao": "QA é o processo de melhorar os processos de desenvolvimento para",
+      "explicacao_pratica": "QA é proativo, com foco na melhoria de processos de desenvolvimento; QC é reativo, focando em encontrar defeitos após o desenvolvimento. Diferença:  QA envolve revisar código, realizar auditorias e promover boas práticas; QC envolve realizar testes manuais e automatizados. Exemplo:  QA pode sugerir melhorias no fluxo de desenvolvimento, enquanto QC pode realizar testes de unidade e de integração para encontrar falhas."
+    },
+    {
+      "nome": "Testes Unitários",
+      "categoria": "Garantia da Qualidade / Testes",
+      "definicao": "Testes realizados para verificar o funcionamento correto de unidades",
+      "explicacao_pratica": "Testa componentes individuais de uma aplicação (geralmente funções ou métodos) para garantir que cada parte do código funcione conforme esperado. Ferramentas comuns:  Jest, JUnit, PyTest, Mocha Exemplo:  Testar uma função de cálculo que recebe dois números e retorna a soma correta."
+    },
+    {
+      "nome": "Code Review",
+      "categoria": "Melhoria de Código / Boas Práticas",
+      "definicao": "Processo de revisão do código por um desenvolvedor diferente daquele",
+      "explicacao_pratica": "O code review busca identificar bugs, melhorar a legibilidade do código e garantir boas práticas de desenvolvimento. Boas práticas:  • Revisar código pequeno, não maior que 400 linhas. • Priorizar lógica de negócios e legibilidade. • Dar feedbacks construtivos. Exemplo:  Um desenvolvedor submete seu código para revisão, onde outro revisa o código para identificar melhorias antes de ser integrado ao projeto."
+    },
+    {
+      "nome": "Refatoração de Código",
+      "categoria": "Melhoria Contínua / Boas Práticas",
+      "definicao": "Processo de reescrever o código para torná -lo mais eficiente, legível e",
+      "explicacao_pratica": "Refatoração é importante para reduzir a complexidade, melhorar a manutenção e evitar a dívida técnica. Boas práticas: • Refatore frequentemente para evitar o acúmulo de código ruim. • Faça refatoração de forma incremental para evitar grandes mudanças que podem introduzir novos problemas. Exemplo:  Modificar funções repetitivas para um código mais modular e reutilizável. 🔌 IoT e Sistemas Embarcados"
+    },
+    {
+      "nome": "Dispositivos Conectados e Automação",
+      "categoria": "Internet das Coisas / Automação",
+      "definicao": "Sistemas que conectam dispositivos físicos à internet para coleta,",
+      "explicacao_pratica": " Dispositivos IoT como sensores, atuadores, câmeras e eletrodomésticos se comunicam entre si (ou com a nuvem) para tarefas automatizadas. Exemplos práticos: • Termostato inteligente que ajusta a temperatura com base na presença • Lâmpadas controladas por voz  • Monitoramento remoto de plantações (agro IoT) Protocolos comuns:  MQTT, HTTP, CoAP Plataformas de nuvem:  AWS IoT Core, Azure IoT Hub, Google Cloud IoT"
+    },
+    {
+      "nome": "Programação de Microcontroladores",
+      "categoria": "Sistemas Embarcados",
+      "definicao": "Desenvolvimento de software para dispositivos físicos com capacidade",
+      "explicacao_pratica": " Microcontroladores como o Arduino são programados para realizar tarefas como ler temperatura, acionar relés, detectar movimento, etc. O Raspberry Pi é mais robusto e permite rodar sistemas operacionais como Linux, sendo ótimo para projetos que exigem conectividade, processamento de vídeo ou múltiplas entradas. Linguagens comuns: • Arduino:  C/C++ • Raspberry Pi:  Python, Bash, Node.js Exemplo com Arduino (C++) Exemplo com Raspberry Pi (Python) Acionar LED com GPIO:"
+    },
+    {
+      "nome": "Protocolos de Comunicação em IoT",
+      "categoria": "Internet das Coisas / Conectividade",
+      "definicao": "Conjunto de regras que permitem a troca de dados entre dispositivos",
+      "explicacao_pratica": "Os dispositivos IoT precisam de protocolos eficientes para garantir a troca de dados de forma confiável e em tempo real. Protocolos comuns em IoT: • MQTT:  Protocolo leve e de baixo consumo, ideal para dispositivos com recursos limitados. • CoAP:  Protocolo semelhante ao HTTP, mas otimizado para dispositivos com capacidade limitada e para comunicação em redes de baixo consumo. • HTTP/HTTPS:  Protocolo tradicional usado em muitas aplicações IoT que requerem maior largura de banda. • LoRaWAN:  Protocolo de longo alcance para IoT, usado em sistemas que exigem comunicação em áreas amplas. Exemplo prático:  Usar MQTT para enviar dados de sensores de temperatura para um servidor na nuvem."
+    },
+    {
+      "nome": "Edge Computing em IoT",
+      "categoria": "Internet das Coisas / Processamento",
+      "definicao": "Processamento de dados realizado em dispositivos próximos à fonte de",
+      "explicacao_pratica": "Edge computing reduz a latência e a quantidade de dados enviados para a nuvem, processando dados localmente em dispositivos IoT. Exemplos práticos: • Análise de imagem feita diretamente em uma câmera de segurança. • Sensores de umidade que processam dados e ativam automaticamente irrigação em um sistema agrícola. Plataformas de Edge Computing:  AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge."
+    },
+    {
+      "nome": "Sistemas Embarcados de Baixo Consumo",
+      "categoria": "Sistemas Embarcados / Eficiência",
+      "definicao": "Dispositivos embarcados projetados para operar com consumo",
+      "explicacao_pratica": "Esses sistemas são usados em dispositivos que necessitam funcionar por longos períodos com energia limitada (como dispositivos wearables e sensores remotos). Exemplos práticos: • Sensores de temperatura em áreas remotas alimentados por baterias de baixo consumo. • Dispositivos vestíveis que medem a frequência cardíaca por dias seguidos. Exemplos de microcontroladores de baixo consumo:  ESP32, STM32, MSP430."
+    },
+    {
+      "nome": "Redes de Sensores e Atuadores",
+      "categoria": "Internet das Coisas / Segurança",
+      "definicao": "Conjunto de práticas e técnicas aplicadas para proteger dispositivos",
+      "explicacao_pratica": "Em IoT, a segurança deve ser aplicada desde a comunicação entre dispositivos até a gestão de dados sensíveis. Práticas de segurança comuns: • Criptografia de dados:  para proteger dados sensíveis em trânsito. • Autenticação forte:  para garantir que apenas dispositivos autorizados acessem o sistema. • Atualizações de segurança:  para corrigir vulnerabilidades em dispositivos e sistemas IoT. Exemplo prático:  Usar TLS/SSL para proteger a comunicação entre um termostato inteligente e o servidor na nuvem."
+    },
+    {
+      "nome": "Automação de Processos em IoT",
+      "categoria": "Internet das Coisas / Automação",
+      "definicao": "Uso de dispositivos IoT para realizar tarefas automaticamente, com",
+      "explicacao_pratica": "A automação pode ser aplicada em diversos setores, como na indústria (Indústria 4.0), em casas inteligentes (smart homes), e no monitoramento ambiental. Exemplos práticos: • Sensores de temperatura que ajustam automaticamente o sistema de ar condicionado. • Monitoramento de umidade no solo e acionamento automático de irrigação em plantações. Exemplo prático de automação:  Um sistema de iluminação que acende automaticamente conforme o horário do dia ou movimento detectado."
+    },
+    {
+      "nome": "Modelos de Consumo em IoT",
+      "categoria": "Internet das Coisas / Modelos de Negócio       Definição:  Diferentes formas de monetizar ou utilizar dispositivos IoT, incluindo",
+      "explicacao_pratica": "Com o crescimento da IoT, diversas empresas adotaram modelos como \"IoT as a Service\" ou \"IoT Data as a Service\", onde oferecem dispositivos conectados e análise de dados como serviço. Exemplos de modelos de consumo: • IoT como serviço (IoTaaS):  Empresas que oferecem dispositivos IoT e infraestrutura como serviço, permitindo que clientes integrem sensores em suas operações sem se preocupar com o backend. • IoT Data as a Service:  Empresas que vendem dados coletados por dispositivos IoT (como informações de sensores em áreas agrícolas ou dados de tráfego urbano). Exemplo prático:  Uma empresa oferece sensores de temperatura conectados à nuvem e gera relatórios mensais para seus clientes."
+    },
+    {
+      "nome": "Integração de IoT com Inteligência Artificial (AIoT)",
+      "categoria": "Internet das Coisas / Inteligência Artificial",
+      "definicao": "Integração de dispositivos IoT com algoritmos de IA para análise e",
+      "explicacao_pratica": "A IA processa dados de dispositivos IoT para prever comportamentos, otimizar processos e melhorar a automação. Exemplos práticos: • Dispositivos vestíveis que usam IA para analisar sinais vitais e alertar sobre anomalias. • Câmeras de segurança com reconhecimento facial baseadas em IA. Exemplo prático de AIoT:  Um termostato inteligente que ajusta a temperatura do ambiente com base nos padrões de presença e preferências do usuário. 🕶️ Realidade Aumentada e Virtual (AR/VR)"
+    },
+    {
+      "nome": "Aplicações em Treinamento, Jogos,",
+      "categoria": "Experiências Imersivas / Tecnologias Emergentes",
+      "definicao": "",
+      "explicacao_pratica": " Essas tecnologias são usadas para simular cenários, treinar profissionais, educar de forma interativa ou proporcionar experiências de entretenimento profundas. Áreas de aplicação: • Educação:  simulações anatômicas, laboratórios virtuais • Indústria:  treinamentos técnicos em ambiente seguro • Jogos e Entretenimento:  imersão em mundos virtuais • Arquitetura:  visualização de projetos em escala real • Saúde:  tratamento de fobias, simulações cirúrgicas Exemplo prático com AR (Unity + AR Foundation): Conceitos importantes: • Tracking:  rastreamento de posição do usuário ou de superfícies (plano, rosto, corpo) • Interação natural:  gestos, olhares, movimentos de cabeça ou corpo • FOV (Field of View):  campo de visão — quanto maior, mais imersiva a experiência • Latency:  tempo entre ação e resposta — crucial para conforto e realismo"
+    },
+    {
+      "nome": "Realidade Mista (MR)",
+      "categoria": "Experiências Imersivas / Tecnologias Híbridas",
+      "definicao": "Combinação de AR e VR onde objetos virtuais interagem de forma",
+      "explicacao_pratica": "MR permite, por exemplo, que um objeto virtual fique sobre uma mesa real e reaja se você empurrar ou olhar para ele. Exemplos práticos: • HoloLens da Microsoft exibindo instruções 3D enquanto um técnico monta um equipamento real • Simulações de manutenção industrial com interação realista entre componentes físicos e digitais Diferença -chave:  AR apenas sobrepõe; MR entende e interage com o espaço real."
+    },
+    {
+      "nome": "Motores de Realidade Estendida (XR)",
+      "categoria": "Desenvolvimento / Engines 3D",
+      "definicao": "Plataformas para criação de aplicações em AR, VR e MR com suporte a",
+      "explicacao_pratica": "Engines como Unity e Unreal permitem o desenvolvimento de experiências imersivas usando kits como AR Foundation, Vuforia ou WebXR. Motores populares: • Unity 3D:  Suporte robusto a AR/VR com AR Foundation, XR Toolkit e OpenXR • Unreal Engine:  Gráficos de alta qualidade, ideal para simulações realistas • Godot XR:  Alternativa open -source com suporte crescente Exemplo prático:  Criar um jogo VR com interações físicas usando Unity + XR Interaction Toolkit."
+    },
+    {
+      "nome": "Dispositivos AR/VR/MR",
+      "categoria": "Hardware Imersivo",
+      "definicao": "Equipamentos usados para acessar experiências em AR, VR ou MR,",
+      "explicacao_pratica": "A escolha do dispositivo define as capacidades (mobilidade, fidelidade, grau de imersão). Dispositivos comuns: • AR:  Smartphones, tablets, HoloLens, Magic Leap • VR:  Oculus Quest, HTC Vive, PlayStation VR, Valve Index • MR:  HoloLens 2, Magic Leap 2 Critérios de escolha:  resolução, FOV, tipo de tracking, conforto, autonomia."
+    },
+    {
+      "nome": "WebAR e WebVR",
+      "categoria": "Tecnologias Web Imersivas",
+      "definicao": "Abordagens para entregar experiências em AR/VR diretamente em",
+      "explicacao_pratica": "Usando frameworks JavaScript, é possível acessar a câmera e sensores do dispositivo para experiências imersivas acessíveis por URL. Bibliotecas populares: • WebXR API:  Padrão do W3C para criar experiências XR no navegador • 8thWall (WebAR) : Plataforma comercial que oferece AR via browser  • A-Frame (WebVR):  Framework declarativo para VR/3D na web Exemplo prático:  Um filtro de AR em uma página de e -commerce que mostra o produto na sua casa via câmera."
+    },
+    {
+      "nome": "SLAM – Simultaneous Localization and Mapping",
+      "categoria": "Computação Espacial",
+      "definicao": "Técnica usada por dispositivos AR para mapear o ambiente e",
+      "explicacao_pratica": "Permite que objetos virtuais fiquem fixos em superfícies reais mesmo quando o usuário se move. Onde é usado:  ARKit (Apple), ARCore (Google), HoloLens Exemplo prático:  Posicionar uma cadeira virtual no chão e vê -la de diferentes ângulos sem que ela “flutue” ou se mova."
+    },
+    {
+      "nome": "Experiência Imersiva",
+      "categoria": "Design de Interação / Experiência do Usuário",
+      "definicao": "Sensação de presença e engajamento total em um ambiente digital que",
+      "explicacao_pratica": "Experiência imersiva é mais do que tecnologia — é sobre narrativa, interface, interação natural e sensação de presença. Elementos -chave para imersão: • Áudio espacial • Feedback visual e tátil • Narrativas não lineares • Interações intuitivas Exemplo prático:  Jogo VR com som 3D, cenários responsivos e objetos que você pode tocar, pegar e manipular."
+    },
+    {
+      "nome": "Áudio Espacial (3D Audio)",
+      "categoria": "Realismo Imersivo",
+      "definicao": "Técnica que posiciona sons em um espaço tridimensional para"
+    },
+    {
+      "nome": "Haptics (Feedback Tátil)",
+      "categoria": "Interação Física",
+      "definicao": "Sensações físicas geradas por dispositivos para simular toque,",
+      "explicacao_pratica": "Luvas, controladores ou coletes vibram ou aplicam pressão quando o usuário interage com objetos digitais. Exemplos de dispositivos: • Controladores do Oculus Touch • Luvas haptics (como as da HaptX) • Cintos ou coletes com resposta tátil Exemplo prático:  Sentir a vibração ao “tocar” um botão virtual ou impacto em jogos VR."
+    },
+    {
+      "nome": "FPS e Latência em XR",
+      "categoria": "Performance e Conforto",
+      "definicao": "FPS (frames por segundo) e latência (atraso de resposta) são críticos",
+      "explicacao_pratica": "Em XR, idealmente o FPS é 90 ou superior e a latência abaixo de 20 ms. Valores ruins causam enjoo (motion sickness). Ferramentas para medição:  Unity Profiler, SteamVR Stats, OVR Metrics Boa prática:  Otimizar cenas com LOD, iluminação leve e reduzir chamadas de renderização.  🔗 Blockchain e Criptomoedas"
+    },
+    {
+      "nome": "Blockchain",
+      "categoria": "Tecnologia de Registro Distribuído",
+      "definicao": "Uma blockchain  é uma estrutura de dados descentralizada que",
+      "explicacao_pratica": " A blockchain  é o coração das criptomoedas como o Bitcoin e Ethereum. Ela não depende de um servidor central; em vez disso, a rede de computadores (nós) validam e registram as transações em blocos, garantindo segurança, descentralização e imutabilidade.",
+      "dicas_de_uso": " • A blockchain  é usada em vários setores além das criptomoedas, como votação eletrônica , gestão de cadeias de suprimentos , e contratos inteligentes . • Ethereum  e Bitcoin  são exemplos clássicos de blockchains públicas."
+    },
+    {
+      "nome": "Bitcoin (BTC)",
+      "categoria": "Criptomoeda",
+      "definicao": "O Bitcoin  é uma moeda digital descentralizada que utiliza blockchain",
+      "comando_exemplo": "",
+      "explicacao_pratica": " O Bitcoin  permite transações diretas entre usuários sem a necessidade de intermediários financeiros, como bancos. Suas transações são registradas na blockchain  do Bitcoin, o que garante que ninguém possa alterar o histórico de transações.",
+      "dicas_de_uso": " • Bitcoin é usado como reserva de valor  (semelhante ao ouro) ou moeda de pagamento  em diversas plataformas. • É importante sempre manter sua chave privada  segura, pois ela é a única forma de acessar seus Bitcoins."
+    },
+    {
+      "nome": "Ethereum (ETH)",
+      "categoria": "Plataforma de Smart Contracts e Criptomoeda",
+      "definicao": "O Ethereum  é uma blockchain que permite a criação de smart",
+      "explicacao_pratica": " O Ethereum  oferece a possibilidade de escrever e executar contratos inteligentes, que são programas autoexecutáveis na blockchain. Isso possibilita criar sistemas descentralizados, como exchanges descentralizadas, jogos, e mercados de NFTs, sem a necessidade de uma autoridade central.",
+      "dicas_de_uso": " • Solidity  é a principal linguagem de programação utilizada para escrever smart contracts  no Ethereum. • A ETH  (Ether) é usada para pagar por transações e execução de contratos inteligentes na rede Ethereum."
+    },
+    {
+      "nome": "Smart Contract",
+      "categoria": "Blockchain / Automação",
+      "definicao": "Um smart contract  é um contrato autoexecutável onde as condições",
+      "explicacao_pratica": " Os smart contracts  permitem a criação de acordos entre duas ou mais partes sem necessidade de um intermediário. No Ethereum, por exemplo, o contrato é executado automaticamente quando as condições do código são atendidas, garantindo que as regras sejam cumpridas de forma tr ansparente e segura.",
+      "dicas_de_uso": " • DApps (Aplicações descentralizadas)  são criadas a partir de smart contracts , permitindo desde exchanges descentralizadas a jogos interativos. • Ao escrever contratos inteligentes, sempre audite o código para evitar vulnerabilidades e falhas de segurança."
+    },
+    {
+      "nome": "Proof of Work (PoW)",
+      "categoria": "Mecanismo de Consenso",
+      "definicao": "O Proof of Work (PoW)  é um mecanismo de consenso usado por",
+      "explicacao_pratica": " No PoW , os mineradores competem para resolver um problema matemático (baseado em hashes), e o primeiro a resolver recebe uma recompensa (geralmente em criptomoedas). Isso garante a segurança da rede e impede que alguém altere os blocos registrados.",
+      "dicas_de_uso": " • PoW consome muita energia devido ao processamento necessário para resolver os cálculos. Isso gerou debates sobre o impacto ambiental da mineração. • Algumas blockchains, como o Ethereum 2.0 , estão se movendo para Proof of Stake (PoS)  para reduzir o consumo de energia."
+    },
+    {
+      "nome": "Token ERC -20",
+      "categoria": "Criação de Tokens / Blockchain",
+      "definicao": "ERC -20 é um padrão de token no Ethereum  que define um conjunto de",
+      "explicacao_pratica": " Tokens ERC -20 são amplamente utilizados em ICOs (Initial Coin Offerings), DeFi, e como meio de pagamento dentro de aplicações descentralizadas. Qualquer token que siga o padrão ERC -20 pode ser facilmente integrado ao ecossistema Ethereum, incluindo carteiras e exchanges.",
+      "dicas_de_uso": " • Tokens ERC -20 são fungíveis , o que significa que cada unidade é equivalente a outra (como dinheiro). • Ao criar um token, certifique -se de entender completamente as implicações legais e econômicas da sua criação."
+    },
+    {
+      "nome": "NFT (Token Não Fungível)",
+      "categoria": "Ativo Digital / Blockchain",
+      "definicao": "NFTs  são tokens digitais únicos registrados em uma blockchain,",
+      "explicacao_pratica": " Os NFTs  são usados para garantir a autenticidade e a propriedade de itens digitais. Isso permite criar mercados de arte digital, itens colecionáveis e outros ativos exclusivos, com a segurança e rastreabilidade da blockchain.",
+      "dicas_de_uso": " • NFTs estão revolucionando o mercado de arte digital , sendo usados por artistas e colecionadores para comprar, vender e trocar obras. • ERC -721  é o padrão mais popular para criar NFTs no Ethereum."
+    },
+    {
+      "nome": "DeFi (Finanças Descentralizadas)",
+      "categoria": "Aplicações Blockchain",
+      "definicao": "Ecossistema de aplicações financeiras que operam sem",
+      "explicacao_pratica": "Usuários podem emprestar, tomar empréstimos, trocar ativos e gerar rendimentos com criptoativos diretamente em plataformas como Uniswap, Aave ou Compound. Exemplos: • Uniswap:  troca descentralizada (DEX) • Aave:  empréstimos com colateral • Curve:  otimização de liquidez em stablecoins Dica:  Sempre avalie os riscos e auditagens dos contratos antes de usar."
+    },
+    {
+      "nome": "DAO (Organização Autônoma Descentralizada)",
+      "categoria": "Governança Blockchain",
+      "definicao": "Estrutura organizacional baseada em smart contracts que permite",
+      "explicacao_pratica": "Em uma DAO, os participantes votam em propostas que definem os rumos da organização, como investimentos ou mudanças no protocolo. Exemplos:  MakerDAO, ENS DAO Dica:  A participação exige tokens e leitura atenta das regras do contrato inteligente (governance rules)."
+    },
+    {
+      "nome": "Layer 2",
+      "categoria": "Escalabilidade Blockchain",
+      "definicao": "Soluções construídas sobre blockchains principais (Layer 1) como",
+      "explicacao_pratica": "Layer 2 como Arbitrum, Optimism e zkSync processam transações fora da mainnet, mas garantem segurança via provas (rollups). Diferenciação: • Optimistic Rollups:  presume validade e usa provas de fraude  • ZK-Rollups:  usa provas matemáticas para validar lotes de transações Dica:  São ideais para aplicações DeFi e jogos com muitas interações rápidas."
+    },
+    {
+      "nome": "Proof of Stake (PoS)",
+      "categoria": "Mecanismo de Consenso",
+      "definicao": "Modelo de validação de blocos baseado na posse e bloqueio (staking)",
+      "explicacao_pratica": "No PoS, validadores são escolhidos com base em quanto stake possuem. É mais eficiente energeticamente que o PoW. Exemplos:  Ethereum 2.0, Cardano, Solana Dica:  Usuários podem delegar seu stake para pools e receber recompensas."
+    },
+    {
+      "nome": "Wallet (Carteira Cripto)",
+      "categoria": "Segurança e Transações",
+      "definicao": "Ferramenta para armazenar, enviar e receber criptomoedas. Pode ser",
+      "explicacao_pratica": " • Custodial:  a custódia da chave é feita por terceiros (ex: corretoras) • Non -custodial:  o usuário mantém controle total (ex: MetaMask, Ledger) Tipos: • Hot wallets:  conectadas à internet • Cold wallets:  offline, mais seguras Dica:  Guarde bem sua seed phrase  — ela é a única forma de recuperar o acesso."
+    },
+    {
+      "nome": "Segurança em Smart Contracts",
+      "categoria": "Desenvolvimento Blockchain",
+      "definicao": "Conjunto de boas práticas e ferramentas para garantir que contratos",
+      "explicacao_pratica": "Bugs em smart contracts podem causar perda de fundos. Uso de auditorias, testes e padrões seguros é essencial. Boas práticas:  • Testes com frameworks como Hardhat ou Truffle • Auditorias com ferramentas como MythX, Slither • Uso de padrões da OpenZeppelin Dica:  Evite lógica complexa demais e use contratos modulares e reutilizáveis. 📚 Automação e Robótica"
+    },
+    {
+      "nome": "RPA (Robotic Process Automation)",
+      "categoria": "Automação de Processos",
+      "definicao": "Tecnologia que usa bots para automatizar tarefas repetitivas e baseadas",
+      "explicacao_pratica": " Usado em setores como financeiro ou RH para substituir tarefas manuais, como preenchimento de formulários, envio de e -mails ou geração de relatórios.",
+      "dicas_de_uso": " UiPath, Automation Anywhere e Power Automate são líderes no setor. Ideal para processos de alto volume e regras bem definidas."
+    },
+    {
+      "nome": "UiPath",
+      "categoria": "Ferramenta de RPA",
+      "definicao": "Plataforma de automação para criação de robôs que executam tarefas",
+      "explicacao_pratica": " Interface visual permite automações arrastando componentes. Muito usada em ambientes corporativos com integração a Excel, SAP, Outlook.",
+      "dicas_de_uso": " Recomendada para automações Windows. Possui comunidade ativa e versão gratuita (Community Edition) para testes."
+    },
+    {
+      "nome": "Automação com Power Automate",
+      "categoria": "Ferramenta de Automação",
+      "definicao": "Plataforma da Microsoft para criar fluxos automatizados entre serviços,",
+      "explicacao_pratica": " Ideal para empresas que usam Microsoft 365. Automatiza tarefas entre Outlook, Teams, SharePoint, Excel, etc.",
+      "dicas_de_uso": " Possui templates prontos. Indicado para iniciantes em automação corporativa."
+    },
+    {
+      "nome": "OCR (Reconhecimento Óptico de Caracteres)",
+      "categoria": "Tecnologia de Apoio à Automação",
+      "definicao": "Tecnologia que converte imagens ou documentos escaneados em texto",
+      "explicacao_pratica": " Utilizado em processos RPA para extrair dados de notas fiscais, boletos e documentos digitalizados.",
+      "dicas_de_uso": " Funciona melhor com imagens de alta qualidade. Combine com validação manual em processos críticos."
+    },
+    {
+      "nome": "Web Scraping Automatizado",
+      "categoria": "Coleta de Dados",
+      "definicao": "Técnica de extração automatizada de dados de páginas web por meio",
+      "explicacao_pratica": " Usado para coletar dados de preços, produtos, notícias ou tendências em tempo real.",
+      "dicas_de_uso": " Verifique os termos de uso do site antes. Evite sobrecarregar o servidor com muitas requisições."
+    },
+    {
+      "nome": "Webhook",
+      "categoria": "Integração e Automação",
+      "definicao": "Mecanismo de notificação que envia dados automaticamente para uma",
+      "explicacao_pratica": " Usado para notificar sistemas em tempo real sobre eventos como pagamento confirmado, novo usuário cadastrado, etc.",
+      "dicas_de_uso": " Combine com ferramentas como Zapier, Node.js ou filas (RabbitMQ) para tratar eventos assíncronos com segurança."
+    },
+    {
+      "nome": "Agendador de Tarefas (Cron Jobs)",
+      "categoria": "Automação de Servidores",
+      "definicao": "Ferramenta para executar scripts automaticamente em horários",
+      "dicas_de_uso": "Use crontab  -e para editar tarefas. Combine com logs (>> log.txt) para auditoria."
+    },
+    {
+      "nome": "Zapier",
+      "categoria": "Plataforma de Integração e Automação",
+      "definicao": "Ferramenta no -code para automatizar tarefas entre aplicativos web",
+      "explicacao_pratica": "Por exemplo, ao receber um formulário preenchido no Typeform, o Zapier pode automaticamente enviar os dados por e -mail e salvá -los em uma planilha do Google Sheets.",
+      "dicas_de_uso": " • Ideal para integrar apps sem API direta • Possui versão gratuita com limites mensais • Ótimo para usuários não técnicos"
+    },
+    {
+      "nome": "Robô Físico (Robótica Industrial)",
+      "categoria": "Automação Industrial",
+      "definicao": "Máquinas programáveis que realizam tarefas físicas de forma",
+      "explicacao_pratica": "Usados em fábricas para soldagem, montagem, pintura ou transporte de peças. Controlados por CLPs ou sistemas embarcados.",
+      "dicas_de_uso": " • Integração comum com SCADA e sistemas MES • Exige programação em linguagens como Ladder, Structured Text ou C++"
+    },
+    {
+      "nome": "Arduino",
+      "categoria": "Plataforma de Prototipagem Física",
+      "definicao": "Plataforma de código aberto baseada em microcontroladores, voltada",
+      "explicacao_pratica": "Com Arduino, é possível controlar sensores, motores, LEDs e criar sistemas de controle para robôs, casas inteligentes, etc.",
+      "dicas_de_uso": " • Muito usado em educação e prototipagem • Linguagem baseada em C/C++  • Amplo suporte da comunidade e bibliotecas"
+    },
+    {
+      "nome": "Raspberry Pi",
+      "categoria": "Computador Embarcado",
+      "definicao": "Mini computador de baixo custo usado em automação, IoT e robótica,",
+      "explicacao_pratica": "Pode controlar sensores, câmeras e realizar tarefas mais complexas que um Arduino, como reconhecimento de imagem ou automação residencial.",
+      "dicas_de_uso": " • Ideal para automações com Python • Pode rodar servidores locais, aplicações web ou scripts agendados"
+    },
+    {
+      "nome": "MQTT",
+      "categoria": "Protocolo de Comunicação",
+      "definicao": "Protocolo leve de mensagens “publish/subscribe”, usado em sistemas",
+      "explicacao_pratica": "Por exemplo, um sensor envia a temperatura via MQTT para um broker (como Mosquitto), e outro sistema recebe e atua sobre essa informação.",
+      "dicas_de_uso": " • Use tópicos para organização lógica • Ideal para redes com largura de banda limitada • Segurança com TLS e autenticação recomendada"
+    },
+    {
+      "nome": "SCADA (Supervisory Control and Data Acquisition)",
+      "categoria": "Automação Industrial",
+      "definicao": "Sistema que permite monitorar e controlar remotamente processos",
+      "explicacao_pratica": "Exibe em tempo real o estado de máquinas, temperatura, pressão, etc., e permite comandos manuais ou automáticos.",
+      "dicas_de_uso": "• Essencial em plantas industriais, energia e saneamento • Integra com protocolos como Modbus, OPC"
+    }
+  ]
+}
