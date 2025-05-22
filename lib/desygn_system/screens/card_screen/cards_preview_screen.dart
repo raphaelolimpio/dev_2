@@ -25,7 +25,7 @@ class CardsPreviewScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         children: [
           // Exemplo 1: Card de Produto Básico
-          CustomCard(
+          CustomCards(
             viewModel: CardViewMode(
               title: 'Smartwatch Ultra Pro',
               subtitle: 'Última geração, bateria de longa duração.',
@@ -55,7 +55,7 @@ class CardsPreviewScreen extends StatelessWidget {
             ),
           ),
           // Exemplo 2: Card de Serviço
-          CustomCard(
+          CustomCards(
             viewModel: CardViewMode(
               title: 'Plano de Internet 500MB',
               subtitle: 'Velocidade e estabilidade para sua casa.',
@@ -72,7 +72,7 @@ class CardsPreviewScreen extends StatelessWidget {
             ),
           ),
           // Exemplo 3: Card de Assinatura
-          CustomCard(
+          CustomCards(
             viewModel: CardViewMode(
               title: 'Assinatura Premium XYZ',
               subtitle: 'Acesso total a todos os recursos.',
@@ -88,7 +88,7 @@ class CardsPreviewScreen extends StatelessWidget {
             ),
           ),
           // Exemplo 4: Card sem onDecrease e sem onMoreOptions
-          CustomCard(
+          CustomCards(
             viewModel: CardViewMode(
               title: 'Item de Biblioteca',
               subtitle: 'Um livro para leitura.',

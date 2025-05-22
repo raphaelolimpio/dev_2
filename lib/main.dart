@@ -1,5 +1,6 @@
 // lib/main.dart (APENAS PARA VISUALIZAÇÃO TEMPORÁRIA)
-import 'package:dev/desygn_system/screens/card_screen/cards_preview_screen.dart';
+import 'package:dev/desygn_system/screens/Custom_card/custom_cards_preview_screen.dart';
+import 'package:dev/desygn_system/screens/List_card/List_card_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,19 +16,19 @@ class MyApp extends StatelessWidget {
       title: 'Componentes UI Preview',
       theme: ThemeData(primarySwatch: Colors.blue),
       home:
-          const CardsPreviewScreen(), // Chame a tela de visualização dos Cards
-      // Mantenha suas rotas se for usá-las em outras partes do app,
-      // mas para este preview, só a home é importante.
+          const ListCardScreen(), // Chame a tela de visualização dos Custom Cards
+      // Mantenha suas rotas se for usá-las em outras partes do app.
       routes: {
+        // Exemplo de rotas que você pode ter definido:
         // '/profile': (context) => const DummyScreen(title: 'Perfil'),
-        // ...
+        // '/settings': (context) => const DummyScreen(title: 'Configurações'),
+        // '/login': (context) => const DummyScreen(title: 'Login'),
       },
     );
   }
 }
 
-// Uma tela dummy, se necessário para simular navegações (como no CustomAppBar)
-// Se você já tem essa classe, pode ignorar esta parte.
+// Sua classe DummyScreen, se você a tiver definido
 /*
 class DummyScreen extends StatelessWidget {
   final String title;

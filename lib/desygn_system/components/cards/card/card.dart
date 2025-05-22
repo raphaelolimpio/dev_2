@@ -1,121 +1,112 @@
-// lib/desygn_system/components/cards/card/custom_card.dart
 import 'package:dev/desygn_system/components/cards/card/card_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart'; // Import para formatação de moeda
-import 'package:dev/desygn_system/shared/style/Style.dart'; // Seus estilos
-import 'package:dev/desygn_system/shared/color/colors.dart'; // Suas cores
+import 'package:intl/intl.dart';
+import 'package:dev/desygn_system/shared/style/Style.dart';
+import 'package:dev/desygn_system/shared/color/colors.dart';
 
-class CustomCard extends StatelessWidget {
+class CustomCards extends StatelessWidget {
   final CardViewMode viewModel;
+  // Adicione um parâmetro opcional para largura, útil para listas horizontais
+  final double? cardWidth; // <- NOVO
 
-  const CustomCard({super.key, required this.viewModel});
+  const CustomCards({
+    super.key,
+    required this.viewModel,
+    this.cardWidth, // <- NOVO
+  });
 
   @override
   Widget build(BuildContext context) {
-    // Formatação da moeda
     final currencyFormatter = NumberFormat.currency(
       locale: 'pt_BR',
       symbol: 'R\$',
     );
     final formattedValue = currencyFormatter.format(viewModel.value);
 
-    return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      elevation: 2.0, // Adiciona uma pequena sombra para destacar
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
-      ), // Borda arredondada
-      child: InkWell(
-        onTap: viewModel.onTap,
-        borderRadius: BorderRadius.circular(
-          8.0,
-        ), // Garante que o InkWell siga a forma do Card
-        child: Padding(
-          padding: const EdgeInsets.all(12.0), // Aumenta um pouco o padding
-          child: Row(
-            children: [
-              // Imagem / Avatar
-              CircleAvatar(
-                radius: 30, // Aumenta o tamanho do avatar
-                backgroundColor: kGray300, // Cor de fundo para o placeholder
-                backgroundImage:
-                    viewModel.imageUrl != null && viewModel.imageUrl!.isNotEmpty
-                        ? NetworkImage(viewModel.imageUrl!)
-                        : null, // Se não tiver URL, não define backgroundImage
-                child:
-                    viewModel.imageUrl == null || viewModel.imageUrl!.isEmpty
-                        ? Icon(
-                          Icons.shopping_bag,
-                          size: 30,
-                          color: kGray600,
-                        ) // Ícone de placeholder
-                        : null,
-              ),
-              const SizedBox(width: 16.0),
-              // Título e Subtítulo
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+    return SizedBox(
+      // <- ENVOLVA O CARD COM UM SIZEDBOX
+      width: cardWidth, // <- APLICA A LARGURA SE FORNEcida
+      child: Card(
+        margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        elevation: 2.0,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+        child: InkWell(
+          onTap: viewModel.onTap,
+          borderRadius: BorderRadius.circular(8.0),
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  backgroundColor: kGray300,
+                  backgroundImage:
+                      viewModel.imageUrl != null &&
+                              viewModel.imageUrl!.isNotEmpty
+                          ? NetworkImage(viewModel.imageUrl!)
+                          : null,
+                  child:
+                      viewModel.imageUrl == null || viewModel.imageUrl!.isEmpty
+                          ? Icon(Icons.shopping_bag, size: 30, color: kGray600)
+                          : null,
+                ),
+                const SizedBox(width: 16.0),
+                Expanded(
+                  // Este Expanded está ok, desde que o pai (Row) tenha largura definida
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        viewModel.title,
+                        style: normalStyle.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16.0,
+                          color: kFontColorBlack,
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(
+                        viewModel.subtitle,
+                        style: smallStyle.copyWith(color: kGray700),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 8.0),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      viewModel.title,
+                      formattedValue,
                       style: normalStyle.copyWith(
-                        // Usando seu estilo
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        fontSize: 16.0,
-                        color: kFontColorBlack, // Cor do texto
+                        color: appNormalCyanColor,
                       ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
                     ),
-                    Text(
-                      viewModel.subtitle,
-                      style: smallStyle.copyWith(
-                        // Usando seu estilo
-                        color: kGray700, // Cor do texto
+                    if (viewModel.onDecrease != null)
+                      IconButton(
+                        icon: const Icon(
+                          Icons.remove_circle_outline,
+                          color: kRed500,
+                        ),
+                        onPressed: viewModel.onDecrease,
+                        tooltip: 'Diminuir Quantidade',
                       ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
                   ],
                 ),
-              ),
-              const SizedBox(width: 8.0),
-              // Valor e Botão de Diminuir
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end, // Alinha à direita
-                children: [
-                  Text(
-                    formattedValue, // Valor formatado
-                    style: normalStyle.copyWith(
-                      // Usando seu estilo
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: appNormalCyanColor, // Cor do valor
-                    ),
+                if (viewModel.onMoreOptions != null)
+                  IconButton(
+                    icon: const Icon(Icons.more_vert, color: kGray700),
+                    onPressed: viewModel.onMoreOptions,
+                    tooltip: 'Mais Opções',
                   ),
-                  if (viewModel.onDecrease !=
-                      null) // Só mostra se a função for fornecida
-                    IconButton(
-                      icon: const Icon(
-                        Icons.remove_circle_outline,
-                        color: kRed500,
-                      ),
-                      onPressed: viewModel.onDecrease,
-                      tooltip: 'Diminuir Quantidade', // Dica de ferramenta
-                    ),
-                ],
-              ),
-              // Botão de Mais Opções (3 pontos)
-              if (viewModel.onMoreOptions !=
-                  null) // Só mostra se a função for fornecida
-                IconButton(
-                  icon: const Icon(Icons.more_vert, color: kGray700),
-                  onPressed: viewModel.onMoreOptions,
-                  tooltip: 'Mais Opções', // Dica de ferramenta
-                ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

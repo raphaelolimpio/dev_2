@@ -1,13 +1,18 @@
 // lib/desygn_system/components/cards/card/card_view_model.dart
-// Este arquivo permanece como você forneceu.
-class CardViewMode {
+
+// Importação do modelo base
+
+// Altere para estender BaseCardViewModel
+import 'package:dev/desygn_system/components/cards/base/base_card_view_model.dart';
+
+class CardViewMode extends BaseCardViewModel {
   final String title;
   final String subtitle;
   final String? imageUrl;
   final Function()? onTap;
   final double value;
   final Function()? onDecrease;
-  final Function()? onMoreOptions; // Será usado para o botão de 3 pontos
+  final Function()? onMoreOptions;
 
   CardViewMode({
     required this.title,
